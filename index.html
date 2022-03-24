@@ -579,6 +579,30 @@
       </div>
     </div>
   </footer>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Koshish Family Needs your Help</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <b>Save our friend</b><br>
+          <p>This is something serious, One of our friend Dharamvir Dharmacharya, a DIT University Alumni and a Koshish Family Member needs a Kidney Transplant and is currently on Dialysis.</p><br>
+          <b>The expected expenditure is above 20 Lakhs.</b><br><br>
+          We request you to Donate for Saving life of our friend. The guy with a golden heart who with Koshish Family has helped a lot of kids in providing education and basic necessities for kids.<br>
+          <img src="./assets/dharma/image.jpeg" class="img img-thumbnail" style="max-height:200px;margin: auto;display: block;" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="./help-us.html" class="btn" style="background-color: #fd580b;color: #fff;">Help now</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 
@@ -586,4 +610,10 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
+<script type="text/javascript">
+  $(window).on('load', function() {
+      $('#myModal').modal('show');
+  });
+</script>
+
 </html>
