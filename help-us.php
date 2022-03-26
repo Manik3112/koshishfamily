@@ -2,7 +2,7 @@
   $myfile = fopen("progressBar.txt", "r") or die("Unable to open file!");
   $savedValue = fread($myfile,filesize("progressBar.txt"));
   fclose($myfile);
-  $savedValue = (int) $savedValue;
+  $savedValue = (float) $savedValue;
   $barValue = ($savedValue / 20)*100;
 ?>
 <!doctype html>
