@@ -1,3 +1,10 @@
+<?php
+  $myfile = fopen("progressBar.txt", "r") or die("Unable to open file!");
+  $savedValue = fread($myfile,filesize("progressBar.txt"));
+  fclose($myfile);
+  $savedValue = (int) $savedValue;
+  $barValue = ($savedValue / 20)*100;
+?>
 <!doctype html>
 <html lang="en">
 
@@ -85,9 +92,9 @@
             <div>
               <div class="heading">
                 <h2>Target 20 Lakhs</h2><span style="display: inline-block;width: 25px;"></span>
-                <b class="text-success">Reached 4.2 Lakhs</b>
+                <b class="text-success">Reached <?= $savedValue ?> Lakhs</b>
                 <div class="progress">
-                  <div class="progress-bar progress-bar-animated progress-bar-striped bg-success" role="progressbar" style="width: 21%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar progress-bar-animated progress-bar-striped bg-success" role="progressbar" style="width: <?= $barValue ?>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
             </div>
@@ -120,7 +127,6 @@
                         <p>Take Screenshot -> Open Payment App -> Scan Option -> Upload from Gallery</p>
                         <center>
                           <img src="./assets/dharma/scan1.jpeg" class="img img-thumbnail" />
-                            <a class="btn" target="_blank" href="upi://pay?pa=sandeepchaudhary372@oksbi" style="background-color: #007b08;color: #fff;">Pay using UPI</a>
                           </center>
                         </p>
                       </li>
@@ -205,7 +211,6 @@
                     <p>Take Screenshot -> Open Payment App -> Scan Option -> Upload from Gallery</p>
                       <center>
                         <img src="./assets/dharma/scan2.jpeg" class="img img-thumbnail" />                          
-                        <a class="btn" target="_blank" href="upi://pay?pa=amitrajsingh2802@okicici" style="background-color: #007b08;color: #fff;">Pay using UPI</a>
                       </center>
                     </p>
                   </li>
