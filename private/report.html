@@ -1,8 +1,3 @@
-<?php
-if(!isset($_GET['love']) || $_GET['love'] !== 'Dharma'){
-  exit("unauthorized");
-}
-?>
 <!doctype html>
 <html lang="en">
 
@@ -20,6 +15,15 @@ if(!isset($_GET['love']) || $_GET['love'] !== 'Dharma'){
         border-radius: 5px;
       }
     </style>
+    <script>
+    window.onload=passwordCheck;
+    function passwordCheck() {
+      var password = prompt("Please enter the password.");
+      if (!password || password.toLowerCase() !== "lovedharma") {
+        passwordCheck();
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -65,11 +69,7 @@ if(!isset($_GET['love']) || $_GET['love'] !== 'Dharma'){
             <div class="row">
                 <div class="col-12">
                     <div class="heading-wrapper">
-                        <h3>Koshish Family Needs your Help</h3>
-                        <ol>
-                            <li>Home<i class="far fa-angle-double-right"></i></li>
-                            <li>help-us</li>
-                        </ol>
+                        <h3>Koshish Member's Report</h3>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@ if(!isset($_GET['love']) || $_GET['love'] !== 'Dharma'){
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="heading">
-              <h2>Koshish Dharma Report</h2>
+              <h2>Date wise report</h2>
             </div>
           </div>
         </div>
