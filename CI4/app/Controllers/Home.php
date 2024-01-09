@@ -6,6 +6,14 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('welcome_message');
+        return view('section/header')
+            .view('home_page')
+            .view('section/footer');
+    }
+    public function pathshala(): string
+    {
+        return view('section/header')
+            .view('home_page')
+            .view('section/footer');
     }
 }
