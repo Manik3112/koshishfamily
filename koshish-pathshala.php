@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="title" content="Koshish Family - Koshish Pathshala">
+    <meta name="description" content="A Family for the Underprivileged. Dedicated towards helping children gain education and their overall skills ">
+    <meta name="keywords" content="koshish,family,underprivileged,children,education,dehradun">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Koshish Tech Titans">
+
+
     <title>Koshish Family - Koshish Pathshala</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
