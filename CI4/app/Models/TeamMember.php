@@ -7,449 +7,479 @@ use CodeIgniter\Model;
 class TeamMember extends Model
 {
     private $memberJson = '[
-        {
-          "memberId": "KF/2015/0001",
-          "name": "Manik Rastogi",
-          "phone": "9808136139",
-          "email": "manik3112@gmail.com",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0002",
-          "name": "Abhishek rai ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0003",
-          "name": "Abrad amjad ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0004",
-          "name": "Amra ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0005",
-          "name": "Aryan ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0006",
-          "name": "Avantika ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0007",
-          "name": "Aditya ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0008",
-          "name": "Asif ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0009",
-          "name": "Diksha ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0010",
-          "name": "Dhairya ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0011",
-          "name": "Kiran ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0012",
-          "name": "Mridul ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0013",
-          "name": "Rivya ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0014",
-          "name": "Amit ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0015",
-          "name": "Anjali ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0016",
-          "name": "Anshul ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0017",
-          "name": "Aradhna ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0018",
-          "name": "Dharma ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0019",
-          "name": "Neha ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0020",
-          "name": "Netrika ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0021",
-          "name": "Niharika ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0022",
-          "name": "Prarthana ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0023",
-          "name": "Shobhit ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0024",
-          "name": "Harshit rajvanshi",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0025",
-          "name": "Utkarsh ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0026",
-          "name": "Harshita ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0027",
-          "name": "Kadambari ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0028",
-          "name": "Abhishek soni ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0029",
-          "name": "Harsh ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0030",
-          "name": "Prankul ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0031",
-          "name": "Shrija ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0032",
-          "name": "Ugersain ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0033",
-          "name": "Mehek ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0034",
-          "name": "Nandini ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0035",
-          "name": "Neha ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0036",
-          "name": "Nikita ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0037",
-          "name": "Niharika",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0038",
-          "name": "Poorvi ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0039",
-          "name": "Prerna ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0040",
-          "name": "Prince ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0041",
-          "name": "Priya ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0042",
-          "name": "Priyanshu ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0043",
-          "name": "Qasim ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0044",
-          "name": "Rahul ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0045",
-          "name": "Rashi ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0046",
-          "name": "Rohit ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0047",
-          "name": "Sandeep",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0048",
-          "name": "Sejal ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0049",
-          "name": "Shreya ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0050",
-          "name": "Siddharth ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0051",
-          "name": "Sonali ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0052",
-          "name": "Subhanshi ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0053",
-          "name": "Tanvi ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0054",
-          "name": "Tanvi gaba ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0055",
-          "name": "Tanya ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0056",
-          "name": "Tejaswa ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0057",
-          "name": "Urooj ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0058",
-          "name": "Vaishnavi ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0059",
-          "name": "Vanshika ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0060",
-          "name": "Yashraj ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0061",
-          "name": "Devansh",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0062",
-          "name": "Abhijeet",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        },
-        {
-          "memberId": "KF/2015/0063",
-          "name": "Manisha ",
-          "phone": "",
-          "email": "",
-          "photo": ""
-        }
-       ]';
-
+      {
+        "memberId": "KF/2015/0001",
+        "name": "Manik Rastogi",
+        "designation": "Guide",
+        "email": "manik3112@gmail.com",
+        "photo": "",
+        "bloodGroup": "A+"
+      },
+     {
+       "memberId": "KF/2021/0002",
+       "name": "Mridul Jaiswal",
+       "designation": "Memeber",
+       "bloodGroup": "AB+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2012/0003",
+       "name": "Amit Raj Singh ",
+       "designation": "Settler",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2021/0004",
+       "name": "Ugersain",
+       "designation": "HoD",
+       "bloodGroup": "",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2019/0005",
+       "name": "Anshul Saxena ",
+       "designation": "Member",
+       "bloodGroup": "B(+)",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0006",
+       "name": "Niharika Virmani",
+       "designation": "HOD",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2020/0007",
+       "name": "Neha Arya ",
+       "designation": "Member",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0008",
+       "name": "Yashraj jat ",
+       "designation": "Member ",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0009",
+       "name": "Mohamed Abrar Amjad ",
+       "designation": "Member ",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0010",
+       "name": "Prerna deep",
+       "designation": "Member",
+       "bloodGroup": "B+ve",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2022/0011",
+       "name": "Devansh walia",
+       "designation": "Hod website ",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2022/0012",
+       "name": "Rashi Gupta ",
+       "designation": "HOD",
+       "bloodGroup": "AB-",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0013",
+       "name": "Prince yadav ",
+       "designation": "Member",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2019/0014",
+       "name": "Prarthana Ray",
+       "designation": "Guide",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0015",
+       "name": "Wanshika singh ",
+       "designation": "Member",
+       "bloodGroup": "B+ve",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2020/0016",
+       "name": "Sejal singh",
+       "designation": "Member",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0017",
+       "name": "Kadambari gaur",
+       "designation": "Member",
+       "bloodGroup": "",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2019/0018",
+       "name": "Abhishek Soni",
+       "designation": "Guide",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2020/0019",
+       "name": "Netrika Chhettri",
+       "designation": "Pathshala HOD",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2021/0020",
+       "name": "Manisha Chauhan",
+       "designation": "HOD",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2020/0021",
+       "name": "Netrika Chhettri",
+       "designation": "Pathshala HOD",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2022/0022",
+       "name": "Diksha singh ",
+       "designation": "Member ",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2019/0023",
+       "name": "Rivya Bisht",
+       "designation": "Guide",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2020/0024",
+       "name": "Shrija",
+       "designation": "HOD",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2021/0025",
+       "name": "Dhairya Sharma ",
+       "designation": "HOD Finance/ Member Sales",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0026",
+       "name": "Harshita Garg",
+       "designation": "Member ",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0027",
+       "name": "Aryan Chaudhary",
+       "designation": "Member",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0028",
+       "name": "Rahul Kumar Soni",
+       "designation": "Member",
+       "bloodGroup": "Ab-",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2021/0029",
+       "name": "Asif Sheikh (Deny)",
+       "designation": "SALES HOD",
+       "bloodGroup": "A neg (A-)",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2020/0030",
+       "name": "Neha Arya ",
+       "designation": "Member",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2021/0031",
+       "name": "Tanya Sharma ",
+       "designation": "Guide",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2020/0032",
+       "name": "Aditya Agarwal",
+       "designation": "HOD",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0033",
+       "name": "Tanvi Vadiyan",
+       "designation": "Member ",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0034",
+       "name": "Mehak Goyal ",
+       "designation": "Member",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0035",
+       "name": "Mehak Goyal ",
+       "designation": "Member",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2016/0036",
+       "name": "Siddharth payal",
+       "designation": "Guide",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2021/0037",
+       "name": "Ugersain",
+       "designation": "HoD",
+       "bloodGroup": "",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2022/0038",
+       "name": "Tejaswa Raj Sargwan",
+       "designation": "Member",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2020/0039",
+       "name": "Niharika Khanduri ",
+       "designation": "HOD",
+       "bloodGroup": "O+ve",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0040",
+       "name": "Tanvi Gaba",
+       "designation": "Member",
+       "bloodGroup": "O+ve",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0041",
+       "name": "Tanvi Gaba ",
+       "designation": "Member ",
+       "bloodGroup": "0+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0042",
+       "name": "Nikita Singh",
+       "designation": "Co-HOD (finance)",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2021/0043",
+       "name": "Kiran Moura ",
+       "designation": "HOD",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2022/0044",
+       "name": "Sonali Bhatnagar ",
+       "designation": "Member",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2022/0045",
+       "name": "Amra afreen",
+       "designation": "Member",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2022/0046",
+       "name": "Shreya Jain",
+       "designation": "Member",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2014/0047",
+       "name": "Anjali Srivastava ",
+       "designation": "Member",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2017/0048",
+       "name": "Shobhit Bhatt",
+       "designation": "Guide",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0049",
+       "name": "Vaishnavi Mamgain ",
+       "designation": "Member ",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2019/0050",
+       "name": "Utkarsh Gupta ",
+       "designation": "Guide ",
+       "bloodGroup": "O-",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0051",
+       "name": "Poorvi Singh",
+       "designation": "Member",
+       "bloodGroup": "A+ve",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0052",
+       "name": "Subhanshi",
+       "designation": "Member",
+       "bloodGroup": "O+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2012/0053",
+       "name": "Sandeep Kumar",
+       "designation": "Founder",
+       "bloodGroup": "A-",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0054",
+       "name": "Priyanshu Ranjan Mistry ",
+       "designation": "Member",
+       "bloodGroup": "AB+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2017/0055",
+       "name": "Dharmvir Dharmacharya ",
+       "designation": "Member",
+       "bloodGroup": "0+ve",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2017/0056",
+       "name": "Dharmvir Dharmacharya ",
+       "designation": "Member ",
+       "bloodGroup": "0+ve",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0057",
+       "name": "Abhishek rai",
+       "designation": "Member ",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2021/0058",
+       "name": "Aaradhana ",
+       "designation": "Guide",
+       "bloodGroup": "A+",
+       "email": "",
+       "photo": ""
+     },
+     {
+       "memberId": "KF/2023/0059",
+       "name": "Urooj Fatima",
+       "designation": "Member",
+       "bloodGroup": "B+",
+       "email": "",
+       "photo": ""
+     }
+    ]';
     private $memberArray;
 
     public function __construct()
@@ -463,6 +493,7 @@ class TeamMember extends Model
             'name'=>'NAME NOT FOUND',
             'phone'=>'PHONE NOT FOUND',
             'email'=>'EMAIL NOT FOUND',
+            'designation'=>'DESIGNATION_NOT_FOUND',
         ];
         foreach ($this->memberArray as $singleMember) {
             if($singleMember['memberId'] === $id) {
