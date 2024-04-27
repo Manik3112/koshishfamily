@@ -34,7 +34,7 @@
           <li><a href="#">Dehradun,India</a></li>
           <li><a href="mailto:koshishfamily@gmail.com">koshishfamily@gmail.com</a></li>
           <li><a href="mailto:koshishfamily.hr@gmail.com">Contact our HR team</a></li>
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHoWxLs1WtSZH3qXID_INUdRFuInQMJvKbqlkItqvXlH46_Q/viewform">Donate Here</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHoWxLs1WtSZH3qXID_INUdRFuInQMJvKbqlkItqvXlH46_Q/viewform" target="_blank">Donate Here</a></li>
         </ul>
       </div>
     </div>
