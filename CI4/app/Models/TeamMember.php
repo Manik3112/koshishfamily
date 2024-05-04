@@ -10,7 +10,7 @@ class TeamMember extends Model
       {
         "memberId": "KF/2015/0001",
         "name": "Manik Rastogi",
-        "designation": "Guide",
+        "designation": "Member",
         "email": "manik3112@gmail.com",
         "photo": "",
         "bloodGroup": "A+"
@@ -34,7 +34,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2021/0004",
        "name": "Ugersain",
-       "designation": "HoD",
+       "designation": "Member",
        "bloodGroup": "",
        "email": "",
        "photo": ""
@@ -50,7 +50,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2023/0006",
        "name": "Niharika Virmani",
-       "designation": "HOD",
+       "designation": "Member",
        "bloodGroup": "B+",
        "email": "",
        "photo": ""
@@ -90,7 +90,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2022/0011",
        "name": "Devansh walia",
-       "designation": "Hod website ",
+       "designation": "Member website ",
        "bloodGroup": "O+",
        "email": "",
        "photo": ""
@@ -98,7 +98,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2022/0012",
        "name": "Rashi Gupta ",
-       "designation": "HOD",
+       "designation": "Member",
        "bloodGroup": "AB-",
        "email": "",
        "photo": ""
@@ -114,7 +114,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2019/0014",
        "name": "Prarthana Ray",
-       "designation": "Guide",
+       "designation": "Member",
        "bloodGroup": "B+",
        "email": "",
        "photo": ""
@@ -146,7 +146,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2019/0018",
        "name": "Abhishek Soni",
-       "designation": "Guide",
+       "designation": "Member",
        "bloodGroup": "B+",
        "email": "",
        "photo": ""
@@ -154,7 +154,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2020/0019",
        "name": "Netrika Chhettri",
-       "designation": "Pathshala HOD",
+       "designation": "Member",
        "bloodGroup": "O+",
        "email": "",
        "photo": ""
@@ -162,7 +162,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2021/0020",
        "name": "Manisha Chauhan",
-       "designation": "HOD",
+       "designation": "Member",
        "bloodGroup": "A+",
        "email": "",
        "photo": ""
@@ -170,7 +170,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2020/0021",
        "name": "Netrika Chhettri",
-       "designation": "Pathshala HOD",
+       "designation": "Member",
        "bloodGroup": "O+",
        "email": "",
        "photo": ""
@@ -186,7 +186,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2019/0023",
        "name": "Rivya Bisht",
-       "designation": "Guide",
+       "designation": "Member",
        "bloodGroup": "B+",
        "email": "",
        "photo": ""
@@ -194,7 +194,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2020/0024",
        "name": "Shrija",
-       "designation": "HOD",
+       "designation": "Member",
        "bloodGroup": "O+",
        "email": "",
        "photo": ""
@@ -202,7 +202,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2021/0025",
        "name": "Dhairya Sharma ",
-       "designation": "HOD Finance/ Member Sales",
+       "designation": "Member",
        "bloodGroup": "O+",
        "email": "",
        "photo": ""
@@ -210,7 +210,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2023/0026",
        "name": "Harshita Garg",
-       "designation": "Member ",
+       "designation": "Member",
        "bloodGroup": "O+",
        "email": "",
        "photo": ""
@@ -234,7 +234,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2021/0029",
        "name": "Asif Sheikh (Deny)",
-       "designation": "SALES HOD",
+       "designation": "Member",
        "bloodGroup": "A neg (A-)",
        "email": "",
        "photo": ""
@@ -250,7 +250,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2021/0031",
        "name": "Tanya Sharma ",
-       "designation": "Guide",
+       "designation": "Member",
        "bloodGroup": "A+",
        "email": "",
        "photo": ""
@@ -258,7 +258,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2020/0032",
        "name": "Aditya Agarwal",
-       "designation": "HOD",
+       "designation": "Member",
        "bloodGroup": "B+",
        "email": "",
        "photo": ""
@@ -290,7 +290,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2016/0036",
        "name": "Siddharth payal",
-       "designation": "Guide",
+       "designation": "Member",
        "bloodGroup": "B+",
        "email": "",
        "photo": ""
@@ -298,7 +298,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2021/0037",
        "name": "Ugersain",
-       "designation": "HoD",
+       "designation": "Member",
        "bloodGroup": "",
        "email": "",
        "photo": ""
@@ -314,7 +314,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2020/0039",
        "name": "Niharika Khanduri ",
-       "designation": "HOD",
+       "designation": "Member",
        "bloodGroup": "O+ve",
        "email": "",
        "photo": ""
@@ -330,7 +330,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2023/0041",
        "name": "Tanvi Gaba ",
-       "designation": "Member ",
+       "designation": "Member",
        "bloodGroup": "0+",
        "email": "",
        "photo": ""
@@ -338,7 +338,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2023/0042",
        "name": "Nikita Singh",
-       "designation": "Co-HOD (finance)",
+       "designation": "Member",
        "bloodGroup": "B+",
        "email": "",
        "photo": ""
@@ -346,7 +346,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2021/0043",
        "name": "Kiran Moura ",
-       "designation": "HOD",
+       "designation": "Member",
        "bloodGroup": "A+",
        "email": "",
        "photo": ""
@@ -386,7 +386,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2017/0048",
        "name": "Shobhit Bhatt",
-       "designation": "Guide",
+       "designation": "Member",
        "bloodGroup": "B+",
        "email": "",
        "photo": ""
@@ -402,7 +402,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2019/0050",
        "name": "Utkarsh Gupta ",
-       "designation": "Guide ",
+       "designation": "Member ",
        "bloodGroup": "O-",
        "email": "",
        "photo": ""
@@ -426,7 +426,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2012/0053",
        "name": "Sandeep Kumar",
-       "designation": "Founder",
+       "designation": "Member",
        "bloodGroup": "A-",
        "email": "",
        "photo": ""
@@ -458,7 +458,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2023/0057",
        "name": "Abhishek rai",
-       "designation": "Member ",
+       "designation": "Member",
        "bloodGroup": "A+",
        "email": "",
        "photo": ""
@@ -466,7 +466,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2021/0058",
        "name": "Aaradhana ",
-       "designation": "Guide",
+       "designation": "Member",
        "bloodGroup": "A+",
        "email": "",
        "photo": ""
