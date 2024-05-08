@@ -18,7 +18,7 @@ class TeamMember extends Model
      {
        "memberId": "KF/2021/0002",
        "name": "Mridul Jaiswal",
-       "designation": "Memeber",
+       "designation": "Member",
        "bloodGroup": "AB+",
        "email": "",
        "photo": ""
