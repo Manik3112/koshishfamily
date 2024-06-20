@@ -13,8 +13,9 @@
             A Family for the Underprivileged. Dedicated towards helping children gain education and their overall skills 
           </span>
         </h1>
-        <a href="#contact" style="text-decoration: none;">
-          <button type="button" class="rounded-pill btn-rounded">Get in Touch
+        <p>Volunteer and make a difference in the life of people those who are in need</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform" target="_blank" style="text-decoration: none;">
+          <button type="button" class="rounded-pill btn-rounded">Join our Team
             <span><i class="fas fa-arrow-right"></i></span>
           </button>
         </a>

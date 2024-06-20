@@ -32,6 +32,7 @@
           <!-- <li class="nav-item"><a class="nav-link" href="#faq">faq</a></li> -->
           <li class="nav-item"><a class="nav-link" href="#portfolio">Events</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">contact</a>
+          <li class="nav-item"><a class="nav-link" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform?usp=send_form">Join Us</a>
           </li>
         </ul>
         <!-- <button type="button" class="rounded-pill btn-rounded">
