@@ -14,7 +14,7 @@
           <div class="card-body">
             <h4 class="card-title"><?= $name ?></h4>
             <p class="card-text">Designation: <?= $designation ?></p>
-            <p class="card-text">Email: <?= $email ?></p>
+            <p class="card-text">Blood Group: <?= $bloodGroup ?></p>
           </div>
         </div>
       </div>

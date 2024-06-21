@@ -7,479 +7,67 @@ use CodeIgniter\Model;
 class TeamMember extends Model
 {
     private $memberJson = '[
-      {
-        "memberId": "KF/2015/0001",
-        "name": "Manik Rastogi",
-        "designation": "Guide",
-        "email": "manik3112@gmail.com",
-        "photo": "",
-        "bloodGroup": "A+"
-      },
-     {
-       "memberId": "KF/2021/0002",
-       "name": "Mridul Jaiswal",
-       "designation": "Memeber",
-       "bloodGroup": "AB+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2012/0003",
-       "name": "Amit Raj Singh ",
-       "designation": "Settler",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2021/0004",
-       "name": "Ugersain",
-       "designation": "HoD",
-       "bloodGroup": "",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2019/0005",
-       "name": "Anshul Saxena ",
-       "designation": "Member",
-       "bloodGroup": "B(+)",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0006",
-       "name": "Niharika Virmani",
-       "designation": "HOD",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2020/0007",
-       "name": "Neha Arya ",
-       "designation": "Member",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0008",
-       "name": "Yashraj jat ",
-       "designation": "Member ",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0009",
-       "name": "Mohamed Abrar Amjad ",
-       "designation": "Member ",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0010",
-       "name": "Prerna deep",
-       "designation": "Member",
-       "bloodGroup": "B+ve",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2022/0011",
-       "name": "Devansh walia",
-       "designation": "Hod website ",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2022/0012",
-       "name": "Rashi Gupta ",
-       "designation": "HOD",
-       "bloodGroup": "AB-",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0013",
-       "name": "Prince yadav ",
-       "designation": "Member",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2019/0014",
-       "name": "Prarthana Ray",
-       "designation": "Guide",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0015",
-       "name": "Wanshika singh ",
-       "designation": "Member",
-       "bloodGroup": "B+ve",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2020/0016",
-       "name": "Sejal singh",
-       "designation": "Member",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0017",
-       "name": "Kadambari gaur",
-       "designation": "Member",
-       "bloodGroup": "",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2019/0018",
-       "name": "Abhishek Soni",
-       "designation": "Guide",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2020/0019",
-       "name": "Netrika Chhettri",
-       "designation": "Pathshala HOD",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2021/0020",
-       "name": "Manisha Chauhan",
-       "designation": "HOD",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2020/0021",
-       "name": "Netrika Chhettri",
-       "designation": "Pathshala HOD",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2022/0022",
-       "name": "Diksha singh ",
-       "designation": "Member ",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2019/0023",
-       "name": "Rivya Bisht",
-       "designation": "Guide",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2020/0024",
-       "name": "Shrija",
-       "designation": "HOD",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2021/0025",
-       "name": "Dhairya Sharma ",
-       "designation": "HOD Finance/ Member Sales",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0026",
-       "name": "Harshita Garg",
-       "designation": "Member ",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0027",
-       "name": "Aryan Chaudhary",
-       "designation": "Member",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0028",
-       "name": "Rahul Kumar Soni",
-       "designation": "Member",
-       "bloodGroup": "Ab-",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2021/0029",
-       "name": "Asif Sheikh (Deny)",
-       "designation": "SALES HOD",
-       "bloodGroup": "A neg (A-)",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2020/0030",
-       "name": "Neha Arya ",
-       "designation": "Member",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2021/0031",
-       "name": "Tanya Sharma ",
-       "designation": "Guide",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2020/0032",
-       "name": "Aditya Agarwal",
-       "designation": "HOD",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0033",
-       "name": "Tanvi Vadiyan",
-       "designation": "Member ",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0034",
-       "name": "Mehak Goyal ",
-       "designation": "Member",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0035",
-       "name": "Mehak Goyal ",
-       "designation": "Member",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2016/0036",
-       "name": "Siddharth payal",
-       "designation": "Guide",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2021/0037",
-       "name": "Ugersain",
-       "designation": "HoD",
-       "bloodGroup": "",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2022/0038",
-       "name": "Tejaswa Raj Sargwan",
-       "designation": "Member",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2020/0039",
-       "name": "Niharika Khanduri ",
-       "designation": "HOD",
-       "bloodGroup": "O+ve",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0040",
-       "name": "Tanvi Gaba",
-       "designation": "Member",
-       "bloodGroup": "O+ve",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0041",
-       "name": "Tanvi Gaba ",
-       "designation": "Member ",
-       "bloodGroup": "0+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0042",
-       "name": "Nikita Singh",
-       "designation": "Co-HOD (finance)",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2021/0043",
-       "name": "Kiran Moura ",
-       "designation": "HOD",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2022/0044",
-       "name": "Sonali Bhatnagar ",
-       "designation": "Member",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2022/0045",
-       "name": "Amra afreen",
-       "designation": "Member",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2022/0046",
-       "name": "Shreya Jain",
-       "designation": "Member",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2014/0047",
-       "name": "Anjali Srivastava ",
-       "designation": "Member",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2017/0048",
-       "name": "Shobhit Bhatt",
-       "designation": "Guide",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0049",
-       "name": "Vaishnavi Mamgain ",
-       "designation": "Member ",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2019/0050",
-       "name": "Utkarsh Gupta ",
-       "designation": "Guide ",
-       "bloodGroup": "O-",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0051",
-       "name": "Poorvi Singh",
-       "designation": "Member",
-       "bloodGroup": "A+ve",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0052",
-       "name": "Subhanshi",
-       "designation": "Member",
-       "bloodGroup": "O+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2012/0053",
-       "name": "Sandeep Kumar",
-       "designation": "Founder",
-       "bloodGroup": "A-",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0054",
-       "name": "Priyanshu Ranjan Mistry ",
-       "designation": "Member",
-       "bloodGroup": "AB+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2017/0055",
-       "name": "Dharmvir Dharmacharya ",
-       "designation": "Member",
-       "bloodGroup": "0+ve",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2017/0056",
-       "name": "Dharmvir Dharmacharya ",
-       "designation": "Member ",
-       "bloodGroup": "0+ve",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0057",
-       "name": "Abhishek rai",
-       "designation": "Member ",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2021/0058",
-       "name": "Aaradhana ",
-       "designation": "Guide",
-       "bloodGroup": "A+",
-       "email": "",
-       "photo": ""
-     },
-     {
-       "memberId": "KF/2023/0059",
-       "name": "Urooj Fatima",
-       "designation": "Member",
-       "bloodGroup": "B+",
-       "email": "",
-       "photo": ""
-     }
-    ]';
+        {"memberId": "M15MANRAS", "name": "Manik Rastogi", "designation": "Member", "email": "manik3112@gmail.com", "photo": "", "bloodGroup": "A+", "joiningYear": 2015},
+        {"memberId": "M21MRIJAI", "name": "Mridul Jaiswal", "designation": "Member", "email": "", "photo": "", "bloodGroup": "AB+", "joiningYear": 2021},
+        {"memberId": "M12AMIRAJ", "name": "Amit Raj Singh", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2012},
+        {"memberId": "M21UGERSA", "name": "Ugersain", "designation": "Member", "email": "", "photo": "", "bloodGroup": "", "joiningYear": 2021},
+        {"memberId": "M19ANSSAX", "name": "Anshul Saxena", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B(+)", "joiningYear": 2019},
+        {"memberId": "M23NIHVIR", "name": "Niharika Virmani", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2023},
+        {"memberId": "M20NEHARY", "name": "Neha Arya", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2020},
+        {"memberId": "M23YASJAT", "name": "Yashraj jat", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
+        {"memberId": "M23MOHABR", "name": "Mohamed Abrar Amjad", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
+        {"memberId": "M23PREDEE", "name": "Prerna deep", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+ve", "joiningYear": 2023},
+        {"memberId": "M22DEVWAL", "name": "Devansh walia", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2022},
+        {"memberId": "M22RASGUP", "name": "Rashi Gupta", "designation": "Member", "email": "", "photo": "", "bloodGroup": "AB-", "joiningYear": 2022},
+        {"memberId": "M23PRIYAD", "name": "Prince yadav", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
+        {"memberId": "M19PRARAY", "name": "Prarthana Ray", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2019},
+        {"memberId": "M23WANSIN", "name": "Wanshika singh", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+ve", "joiningYear": 2023},
+        {"memberId": "M20SEJSIN", "name": "Sejal singh", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2020},
+        {"memberId": "M23KADGAU", "name": "Kadambari gaur", "designation": "Member", "email": "", "photo": "", "bloodGroup": "", "joiningYear": 2023},
+        {"memberId": "M19ABHSON", "name": "Abhishek Soni", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2019},
+        {"memberId": "M20NETCHH", "name": "Netrika Chhettri", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2020},
+        {"memberId": "M21MANCHA", "name": "Manisha Chauhan", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2021},
+        {"memberId": "M20NETCHH", "name": "Netrika Chhettri", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2020},
+        {"memberId": "M22DIKSIN", "name": "Diksha singh", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2022},
+        {"memberId": "M19RIVBIS", "name": "Rivya Bisht", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2019},
+        {"memberId": "M20SHRIJA", "name": "Shrija", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2020},
+        {"memberId": "M21DHASHA", "name": "Dhairya Sharma", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2021},
+        {"memberId": "M23HARGAR", "name": "Harshita Garg", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2023},
+        {"memberId": "M23ARYCHA", "name": "Aryan Chaudhary", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
+        {"memberId": "M23RAHKUM", "name": "Rahul Kumar Soni", "designation": "Member", "email": "", "photo": "", "bloodGroup": "Ab-", "joiningYear": 2023},
+        {"memberId": "M21ASISHE", "name": "Asif Sheikh (Deny)", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A neg (A-)", "joiningYear": 2021},
+        {"memberId": "M20NEHARY", "name": "Neha Arya", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2020},
+        {"memberId": "M21TANSHA", "name": "Tanya Sharma", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2021},
+        {"memberId": "M20ADIAGA", "name": "Aditya Agarwal", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2020},
+        {"memberId": "M23TANVAD", "name": "Tanvi Vadiyan", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2023},
+        {"memberId": "M23MEHGOY", "name": "Mehak Goyal", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
+        {"memberId": "M23MEHGOY", "name": "Mehak Goyal", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
+        {"memberId": "M16SIDPAY", "name": "Siddharth payal", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2016},
+        {"memberId": "M21UGERSA", "name": "Ugersain", "designation": "Member", "email": "", "photo": "", "bloodGroup": "", "joiningYear": 2021},
+        {"memberId": "M22TEJRAJ", "name": "Tejaswa Raj Sargwan", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2022},
+        {"memberId": "M20NIHKHA", "name": "Niharika Khanduri", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+ve", "joiningYear": 2020},
+        {"memberId": "M23TANGAB", "name": "Tanvi Gaba", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+ve", "joiningYear": 2023},
+        {"memberId": "M23TANGAB", "name": "Tanvi Gaba", "designation": "Member", "email": "", "photo": "", "bloodGroup": "0+", "joiningYear": 2023},
+        {"memberId": "M23NIKSIN", "name": "Nikita Singh", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2023},
+        {"memberId": "M21KIRMOU", "name": "Kiran Moura", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2021},
+        {"memberId": "M22SONBHA", "name": "Sonali Bhatnagar", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2022},
+        {"memberId": "M22AMRAFR", "name": "Amra afreen", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2022},
+        {"memberId": "M22SHRJAI", "name": "Shreya Jain", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2022},
+        {"memberId": "M14ANJSRI", "name": "Anjali Srivastava", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2014},
+        {"memberId": "M17SHOBHA", "name": "Shobhit Bhatt", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2017},
+        {"memberId": "M23VAIMAM", "name": "Vaishnavi Mamgain", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
+        {"memberId": "M19UTKGUP", "name": "Utkarsh Gupta", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O-", "joiningYear": 2019},
+        {"memberId": "M23POOSIN", "name": "Poorvi Singh", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+ve", "joiningYear": 2023},
+        {"memberId": "M23SUBHAN", "name": "Subhanshi", "designation": "Member", "email": "", "photo": "", "bloodGroup": "O+", "joiningYear": 2023},
+        {"memberId": "M12SANKUM", "name": "Sandeep Kumar", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A-", "joiningYear": 2012},
+        {"memberId": "M23PRIRAN", "name": "Priyanshu Ranjan Mistry", "designation": "Member", "email": "", "photo": "", "bloodGroup": "AB+", "joiningYear": 2023},
+        {"memberId": "M17DHADHA", "name": "Dharmvir Dharmacharya", "designation": "Member", "email": "", "photo": "", "bloodGroup": "0+ve", "joiningYear": 2017},
+        {"memberId": "M17DHADHA", "name": "Dharmvir Dharmacharya", "designation": "Member", "email": "", "photo": "", "bloodGroup": "0+ve", "joiningYear": 2017},
+        {"memberId": "M23ABHRAI", "name": "Abhishek rai", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
+        {"memberId": "M21AARADH", "name": "Aaradhana", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2021},
+        {"memberId": "M23UROFAT", "name": "Urooj Fatima", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2023}
+      ]
+      ';
     private $memberArray;
 
     public function __construct()
@@ -494,6 +82,7 @@ class TeamMember extends Model
             'phone'=>'PHONE NOT FOUND',
             'email'=>'EMAIL NOT FOUND',
             'designation'=>'DESIGNATION_NOT_FOUND',
+            'bloodGroup'=>'BLOOD GROUP NOT FOUND',
         ];
         foreach ($this->memberArray as $singleMember) {
             if($singleMember['memberId'] === $id) {
