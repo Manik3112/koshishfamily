@@ -172,30 +172,70 @@
 </section>
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////
-                               START SECTION 5 - THE TESTIMONIALS  
+                               START SECTION 5 - THE TIMELINE 
 /////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<section id="testimonials" class="testimonials">
+<section id="timeline" class="timeline">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
   </svg>
   
-  <div class="container text-white text-center">
-    <h1 class="display-3 fw-bold">Timeline</h1>
-        <hr style="width: 100px; height: 3px; " class="mx-auto">
-        <p class="lead pt-1">Timeline of Koshish Family</p>
-    <div class="row text-center text-white py-3">
-      <div class="col-12 col-md-6">
-        <img src="<?= base_url() ?>images/timeline_1.png" alt="Koshish Family Timeline 1" class="img-fluid mb-3">
-      </div>
-      <div class="col-12 col-md-6">
-        <img src="<?= base_url() ?>images/timeline_2.png" alt="Koshish Family Timeline 2" class="img-fluid mb-3">
+  <div class="container">
+    <div class="row text-center">
+      <h1 class="display-3 fw-bold">Our Journey</h1>
+      <hr style="width: 100px; height: 3px; " class="mx-auto">
+      <p class="lead pt-1">The Evolution of Koshish Family</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="timeline-slider">
+          <?php
+          $timelineData = [
+            ["year" => 2012, "title" => "प्रारंभिक (Beginning)", "details" => "Journey started with teaching One kid. Raised Funds for him by selling handmade cards outside College canteen. Gave our efforts a name 'Koshish'"],
+            ["year" => 2013, "title" => "इक्शणा ( Vision)", "details" => "Created a Vision of providing education for the underprivileged kids, added more kids and members to Koshish and made it a family."],
+            ["year" => 2014, "title" => "साक्षरता (Education)", "details" => "Started Sending all kids to school taking care of their basic necessities and started celebrating major festivals likes Holi, Diwali, Rakhi, etc."],
+            ["year" => 2015, "title" => "उदय (Rise)", "details" => "Became a fully organized team, recruiting members from all over the city running campaigns like Installation of Dustbins, Distribution Drives and Craft Events."],
+            ["year" => 2016, "title" => "संवर्धनम् (Care)", "details" => "Took one step ahead in taking responsibilities of our kids' health, hygiene, and sanitation. Started organizing Health and Dental Camps for Kids and members."],
+            ["year" => 2017, "title" => "वितरणम् (Distribution)", "details" => "Visited Orphanage for the first time. Started organizing fruits and clothes distribution drives"],
+            ["year" => 2018, "title" => "सफलता ( Success)", "details" => "First batch of Kids completed their board exams. Planned Kids Annual Trips to Museums, Zoos, etc"],
+            ["year" => 2019, "title" => "सहकारिन् ( Collaboration )", "details" => "Collaboration with other NGOs and societies to help the needy and grow in the process"],
+            ["year" => 2020, "title" => "आलम्बन ( Foundation)", "details" => "First Kid sent for Graduation fully sponsored by Koshish Family. Organized Digital classes during Covid Pandemic for all our kids."],
+            ["year" => 2021, "title" => "प्रयुक्तिः ( Event)", "details" => "Awareness Sessions, Summer Camps, Art n Craft Competitions, Yoga Sessions started on a regular basis."],
+            ["year" => 2022, "title" => "पाठशाला ( Aashiyana)", "details" => "Koshish Family Completed 10 years. \"Aashiyana\" a place to study and grow with full amenities was created for Koshish Kids"],
+            ["year" => 2023, "title" => "पञ्चिका ( Registered)", "details" => "Koshish Family is registered with high hopes of improving lives with the mission to get formal education for all underprivileged Koshish Kids"],
+          ];
+
+          foreach ($timelineData as $index => $item): ?>
+            <div class="timeline-item" onclick="openModal(<?= $index ?>)">
+              <div class="timeline-img" style="background-image: url('<?= base_url() ?>images/timeline/<?= $item['year'] ?>.jpg');"></div>
+              <div class="timeline-content">
+                <h2 class="timeline-year"><?= $item['year'] ?></h2>
+                <h3 class="timeline-title"><?= $item['title'] ?></h3>
+                <p class="timeline-description"><?= substr($item['details'], 0, 100) ?>...</p>
+                <a class="btn-more" href="javascript:void(0)">Read More</a>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
       </div>
     </div>
   </div>
+
+  <div id="timelineModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="Year Image" class="img-fluid mb-3">
+      <h2 id="modalYear" class="text-center"></h2>
+      <h3 id="modalTitle" class="text-center mb-3"></h3>
+      <p id="modalDetails" class="text-justify"></p>
+    </div>
+  </div>
+
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
   </svg>
 </section>
+
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
                        START SECTION 6 - THE FAQ 
@@ -436,3 +476,172 @@
     </div>
   </div>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.timeline-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+});
+
+function openModal(index) {
+  var modal = document.getElementById("timelineModal");
+  var span = document.getElementsByClassName("close")[0];
+  var timelineData = <?= json_encode($timelineData) ?>;
+  var item = timelineData[index];
+
+  document.getElementById("modalYear").textContent = item.year;
+  document.getElementById("modalTitle").textContent = item.title;
+  document.getElementById("modalDetails").textContent = item.details;
+  document.getElementById("modalImage").src = "<?= base_url() ?>images/timeline/" + item.year + ".jpg";
+
+  modal.style.display = "block";
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+</script>
+<style>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
+.timeline {
+  background-color: #f8f9fa;
+}
+
+.timeline-slider {
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+.timeline-item {
+  margin: 0 15px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.timeline-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.timeline-content {
+  padding: 20px;
+}
+
+.timeline-year {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 5px;
+}
+
+.timeline-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-more:hover {
+  background-color: #f57c00;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Customizing Slick Slider */
+.slick-prev:before, .slick-next:before {
+  color: #ff9800;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #ff9800;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #f57c00;
+}
+</style>
