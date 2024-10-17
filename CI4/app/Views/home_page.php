@@ -184,10 +184,10 @@
         <hr style="width: 100px; height: 3px; " class="mx-auto">
         <p class="lead pt-1">Timeline of Koshish Family</p>
     <div class="row text-center text-white py-3">
-      <div class="col-12 col-md-6">
-        <img src="<?= base_url() ?>images/timeline_1.png" alt="Koshish Family Timeline 1" class="img-fluid mb-3">
+      <div class="col-12">
+        <img src="<?= base_url() ?>images/timeline_1.png" alt="Koshish Family Timeline 1" class="img-fluid">
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12">
         <img src="<?= base_url() ?>images/timeline_2.png" alt="Koshish Family Timeline 2" class="img-fluid mb-3">
       </div>
     </div>
