@@ -14,3 +14,4 @@ $routes->get('/koshish-marketing', 'Home::marketing');
 $routes->get('/koshish-finance', 'Home::finance');
 $routes->get('/koshish-art-and-craft', 'Home::artCraft');
 $routes->get('/koshish-hr', 'Home::hr');
+$routes->get('/react', 'React::index');
