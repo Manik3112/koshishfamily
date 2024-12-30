@@ -10,8 +10,8 @@
           connect with us on social media
         </div>
         <div class="col-lg-7 col-md-6">
-          <a href="https://www.facebook.com/1koshish/" target="_blank"><i class="fab fa-facebook"></i></a>
           <a href="https://www.instagram.com/koshish_family" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@KoshishFamily" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </div>
