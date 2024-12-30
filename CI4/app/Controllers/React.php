@@ -4,13 +4,27 @@ namespace App\Controllers;
 
 class React extends BaseController
 {
-
-    public function index(): string
+    public function collection(): string
     {
-        $headerData = ['title' => 'Koshish Family', 'backLink' => '/' ];
+        $headerData = ['title' => 'Collection & Distribution', 'backLink' => '/' ];
         return view('components/header', $headerData)
-            . view('components/common', )
-            . view('react/demo', )
+            . view('react/collection')
+            . view('components/footer');
+    }
+
+    public function arts(): string
+    {
+        $headerData = ['title' => 'Arts & Crafts', 'backLink' => '/' ];
+        return view('components/header', $headerData)
+            . view('react/arts')
+            . view('components/footer');
+    }
+    
+    public function pathshala(): string
+    {
+        $headerData = ['title' => 'Pathshala', 'backLink' => '/' ];
+        return view('components/header', $headerData)
+            . view('react/pathshala')
             . view('components/footer');
     }
 }
