@@ -26,6 +26,9 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
+        <li class="nav-item inline-flex">
+          <a href="https://www.instagram.com/koshish_family" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@KoshishFamily" target="_blank"><i class="fab fa-youtube"></i></a>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Kids</a></li>
           <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
