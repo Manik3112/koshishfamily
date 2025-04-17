@@ -122,7 +122,37 @@
 </style>
 
 <script type="text/babel">
-    const App = () => {
+const App = () => {
+  const [countItems, setCountItems] = React.useState(0);
+  const [countFamilies, setCountFamilies] = React.useState(0);
+  const [countDrives, setCountDrives] = React.useState(0);
+
+  const [itemsDone, setItemsDone] = React.useState(false);
+  const [familiesDone, setFamiliesDone] = React.useState(false);
+  const [drivesDone, setDrivesDone] = React.useState(false);
+
+  React.useEffect(() => {
+    const animateCounter = (current, set, target, doneSetter) => {
+      const increment = Math.ceil(target / 100);
+      if (current < target) {
+        setTimeout(() => {
+          const next = current + increment;
+          if (next >= target) {
+            set(target);
+            doneSetter(true);
+          } else {
+            set(next);
+          }
+        }, 50);
+      }
+    };
+
+    if (!itemsDone) animateCounter(countItems, setCountItems, 5000, setItemsDone);
+    if (!familiesDone) animateCounter(countFamilies, setCountFamilies, 1000, setFamiliesDone);
+    if (!drivesDone) animateCounter(countDrives, setCountDrives, 50, setDrivesDone);
+  }, [countItems, countFamilies, countDrives, itemsDone, familiesDone, drivesDone]);
+
+
         return (
             <div>
                 <div className="wave-bg text-white py-24 px-4 mb-12 relative">
@@ -176,11 +206,60 @@
                             </ul>
                         </div>
                     </div>
+                    
+
                     <div className="grid grid-cols-2 gap-6">
                         <img src="/images/event/event-1.jpg" alt="Distribution Event" className="rounded-xl shadow-xl img-hover" />
                         <img src="/images/event/event-2.jpg" alt="Collection Drive" className="rounded-xl shadow-xl img-hover" />
                     </div>
                 </section>
+                <section className="bg-blue-50 py-16 rounded-xl mb-16">
+                  <div className="max-w-7xl mx-auto px-6">
+                    <h2 className="text-4xl font-bold text-center mb-16 text-blue-700">Our Impact Timeline</h2>
+
+                    {/* Timeline Wrapper */}
+                    <div className="flex justify-between items-start relative">
+                      {[
+                        {
+                          title: "Places Touched",
+                          content: "12 areas in Doon: DIT, Malsi, Sahastradhara, ISBT, Ghantaghar, ONGC, etc.",
+                        },
+                        {
+                          title: "People Reached",
+                          content: "10,800 people reached – approx. 900/year.",
+                        },
+                        {
+                          title: "Clothes/Blankets",
+                          content: "1,44,000 items – 1200/year distributed.",
+                        },
+                        {
+                          title: "Distribution Drives",
+                          content: "Clothes, Stationery, Sanitary Pads, Medicines, Dustbins, Fruits, Accessories.",
+                        },
+                        {
+                          title: "Awareness Camps",
+                          content: "Health, Yoga, Dental camps & awareness sessions monthly/annually.",
+                        },
+                      ].map((item, index) => (
+                        <div key={index} className="flex flex-col items-center w-1/5 relative">
+                          {/* Dot */}
+                          <div className="w-5 h-5 bg-white border-4 border-blue-600 rounded-full z-10"></div>
+                          {index < 4 && (
+                            <div className="absolute top-2 left-3/2 w-full h-1 bg-blue-600 z-0 transform translate-x-1/2"></div>
+                          )}
+                          <div className="mt-6 text-center">
+                            <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.title}</h3>
+                            <p className="text-sm text-blue-600">{item.content}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+
+
+
+
 
                 <section className="bg-blue-50 rounded-xl p-12 mb-16 relative overflow-hidden">
                     <h2 className="artistic-heading text-3xl font-bold text-gray-800 mb-8 text-center fade-in">How It Works</h2>
@@ -220,21 +299,21 @@
                     <h2 className="artistic-heading text-3xl font-bold text-gray-800 mb-8 text-center fade-in">Our Impact</h2>
                     <div className="grid md:grid-cols-3 gap-8 text-center">
                         <div className="bg-white p-8 rounded-xl shadow-lg">
-                            <div className="text-5xl font-bold text-blue-600 mb-4 stat-number">5000+</div>
+                        <div className="text-5xl font-bold text-blue-600 mb-4 stat-number"><span>{itemsDone ? '5000+' : countItems}</span></div>
                             <p className="text-xl text-gray-600">Items Distributed</p>
                             <div className="mt-4">
                                 <i className="fas fa-box text-3xl text-blue-400"></i>
                             </div>
                         </div>
                         <div className="bg-white p-8 rounded-xl shadow-lg">
-                            <div className="text-5xl font-bold text-blue-600 mb-4 stat-number">1000+</div>
+                            <div className="text-5xl font-bold text-blue-600 mb-4 stat-number"><span>{countFamilies < 1000 ? countFamilies : '1000+'}</span></div>
                             <p className="text-xl text-gray-600">Families Helped</p>
                             <div className="mt-4">
                                 <i className="fas fa-users text-3xl text-blue-400"></i>
                             </div>
                         </div>
                         <div className="bg-white p-8 rounded-xl shadow-lg">
-                            <div className="text-5xl font-bold text-blue-600 mb-4 stat-number">50+</div>
+                            <div className="text-5xl font-bold text-blue-600 mb-4 stat-number"><span>{countDrives < 50 ? countDrives : '50+'}</span></div>
                             <p className="text-xl text-gray-600">Collection Drives</p>
                             <div className="mt-4">
                                 <i className="fas fa-hand-holding-heart text-3xl text-blue-400"></i>
