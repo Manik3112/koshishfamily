@@ -2,13 +2,10 @@
 
 <style>
     .creativeimg img {
-        /* Target the image *within* .creativeimg */
         height: 200px;
-        /* Default height */
         width: 100%;
         object-fit: cover;
         display: block;
-        /* Prevents small gap below image */
     }
 
     @media (min-width: 768px) {
@@ -22,8 +19,6 @@
             height: 400px;
         }
     }
-
-    /* ... rest of your CSS ... */
 
     .artistic-heading {
         position: relative;
