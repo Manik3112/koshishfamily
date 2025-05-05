@@ -66,6 +66,11 @@ class TeamMember extends Model
         {"memberId": "M23ABHRAI", "name": "Abhishek rai", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
         {"memberId": "M21AARADH", "name": "Aaradhana", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2021},
         {"memberId": "M23UROFAT", "name": "Urooj Fatima", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2023}
+        {"memberId": "M25SONJIN","name": "Sonika Jindal","designation": "Member","email": "aj7480039@gmail.com","photo": "","bloodGroup": "O+","joiningYear": 2025},
+        {"memberId": "M25SUNBEH","name": "Sunsheel Behera","designation": "Member","email": "sunsheel0001@gmail.com","photo": "","bloodGroup": "O+","joiningYear": 2025},
+        {"memberId": "M25SHASIN","name": "Shambhavi Sinha","designation": "Member","email": "shambhavisinha1306@gmail.com","photo": "","bloodGroup": "B+","joiningYear": 20251},
+        {"memberId": "M25ANIRAJ","name": "Animesh Raj","designation": "Member","email": "7animeshrajmsd7@gmail.com","photo": "","bloodGroup": "B+","joiningYear": 2025},
+        {"memberId": "M25RISBHA","name": "Rishabh Bhardwaj","designation": "Member","email": "rishabhvyas2980@gmail.com","photo": "","bloodGroup": "O+","joiningYear": 2025}
       ]
       ';
     private $memberArray;
