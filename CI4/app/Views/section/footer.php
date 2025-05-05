@@ -12,6 +12,7 @@
         <div class="col-lg-7 col-md-6">
           <a href="https://www.instagram.com/koshish_family" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://www.youtube.com/@KoshishFamily" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/company/koshishfamily/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
