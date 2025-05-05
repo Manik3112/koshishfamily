@@ -152,6 +152,28 @@ const App = () => {
     if (!drivesDone) animateCounter(countDrives, setCountDrives, 50, setDrivesDone);
   }, [countItems, countFamilies, countDrives, itemsDone, familiesDone, drivesDone]);
 
+  const timelineData = [
+    {
+      title: "Places Touched",
+      content: "12 areas in Doon: DIT, Malsi, Sahastradhara, ISBT, Ghantaghar, ONGC, etc.",
+    },
+    {
+      title: "People Reached",
+      content: "10,800 people reached – approx. 900/year.",
+    },
+    {
+      title: "Clothes/Blankets",
+      content: "1,44,000 items – 1200/year distributed.",
+    },
+    {
+      title: "Distribution Drives",
+      content: "Clothes, Stationery, Sanitary Pads, Medicines, Dustbins, Fruits, Accessories.",
+    },
+    {
+      title: "Awareness Camps",
+      content: "Health, Yoga, Dental camps & awareness sessions monthly/annually.",
+    },
+  ];
 
         return (
             <div>
@@ -213,53 +235,45 @@ const App = () => {
                         <img src="/images/event/event-2.jpg" alt="Collection Drive" className="rounded-xl shadow-xl img-hover" />
                     </div>
                 </section>
+
+                {/* --- Responsive Timeline Section --- */}
                 <section className="bg-blue-50 py-16 rounded-xl mb-16">
                   <div className="max-w-7xl mx-auto px-6">
                     <h2 className="text-4xl font-bold text-center mb-16 text-blue-700">Our Impact Timeline</h2>
 
-                    {/* Timeline Wrapper */}
-                    <div className="flex justify-between items-start relative">
-                      {[
-                        {
-                          title: "Places Touched",
-                          content: "12 areas in Doon: DIT, Malsi, Sahastradhara, ISBT, Ghantaghar, ONGC, etc.",
-                        },
-                        {
-                          title: "People Reached",
-                          content: "10,800 people reached – approx. 900/year.",
-                        },
-                        {
-                          title: "Clothes/Blankets",
-                          content: "1,44,000 items – 1200/year distributed.",
-                        },
-                        {
-                          title: "Distribution Drives",
-                          content: "Clothes, Stationery, Sanitary Pads, Medicines, Dustbins, Fruits, Accessories.",
-                        },
-                        {
-                          title: "Awareness Camps",
-                          content: "Health, Yoga, Dental camps & awareness sessions monthly/annually.",
-                        },
-                      ].map((item, index) => (
-                        <div key={index} className="flex flex-col items-center w-1/5 relative">
-                          {/* Dot */}
-                          <div className="w-5 h-5 bg-white border-4 border-blue-600 rounded-full z-10"></div>
-                          {index < 4 && (
-                            <div className="absolute top-2 left-3/2 w-full h-1 bg-blue-600 z-0 transform translate-x-1/2"></div>
+                    {/* Timeline Wrapper - flex-col on mobile, flex-row on md+ */}
+                    <div className="flex flex-col md:flex-row justify-between items-center md:items-start relative px-4 md:px-0">
+                      {timelineData.map((item, index) => (
+                        <React.Fragment key={index}>
+                          {/* Horizontal Line Connector (visible on md+) */}
+                          {index > 0 && (
+                            <div className="hidden md:block flex-grow h-1 bg-blue-600 mt-2 mx-1 lg:mx-2" style={{ flexBasis: '10%' }}></div>
                           )}
-                          <div className="mt-6 text-center">
-                            <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.title}</h3>
-                            <p className="text-sm text-blue-600">{item.content}</p>
+
+                          {/* Timeline Item */}
+                          <div className="flex flex-col items-center text-center relative w-full md:w-auto md:flex-none mb-8 md:mb-0" style={{ flexBasis: '15%' }}>
+                            {/* Dot */}
+                            
+                            <div className="w-5 h-5 bg-white border-4 border-blue-600 rounded-full z-10 flex-shrink-0"></div>
+                            
+
+                            {/* Vertical Line Connector (visible below md) */}
+                            {index >0 && (
+                              <div className="md:hidden w-1 h-12 bg-blue-600 mt-1 mb-1"></div>
+                            )}
+
+                            {/* Text Content */}
+                            <div className="mt-4 md:mt-6">
+                              <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.title}</h3>
+                              <p className="text-sm text-blue-600">{item.content}</p>
+                            </div>
                           </div>
-                        </div>
+                        </React.Fragment>
                       ))}
                     </div>
                   </div>
                 </section>
-
-
-
-
+                {/* --- End Responsive Timeline Section --- */}
 
                 <section className="bg-blue-50 rounded-xl p-12 mb-16 relative overflow-hidden">
                     <h2 className="artistic-heading text-3xl font-bold text-gray-800 mb-8 text-center fade-in">How It Works</h2>
