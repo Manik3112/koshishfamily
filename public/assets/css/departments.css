@@ -1,0 +1,46 @@
+/* Department Dropdown Styles */
+.navbar-nav .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .dropdown-item {
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ff9800;
+  transform: translateX(5px);
+}
+
+.navbar-nav .dropdown-toggle::after {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Footer Department Links Styles */
+.footer .departments-list a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 5px 0;
+}
+
+.footer .departments-list a:hover {
+  color: #ff9800;
+  transform: translateX(5px);
+}
+
+.footer .departments-list li {
+  margin-bottom: 5px;
+}

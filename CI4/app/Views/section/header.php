@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/art.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/fontawesome.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/departments.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -31,6 +32,16 @@
           <a href="https://www.youtube.com/@KoshishFamily" target="_blank"><i class="fab fa-youtube"></i></a>
           <a href="https://www.linkedin.com/company/koshishfamily/" target="_blank"><i class="fab fa-linkedin"></i></a>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Departments
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+              <li><a class="dropdown-item" href="/pathshala">Pathshala</a></li>
+              <li><a class="dropdown-item" href="/collectdkure">Collection & Distribution</a></li>
+              <li><a class="dropdown-item" href="/arts">Arts & Crafts</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#services">Kids</a></li>
           <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
           <!-- <li class="nav-item"><a class="nav-link" href="#faq">faq</a></li> -->
