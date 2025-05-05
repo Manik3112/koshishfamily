@@ -12,6 +12,7 @@
         <div class="col-lg-7 col-md-6">
           <a href="https://www.instagram.com/koshish_family" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://www.youtube.com/@KoshishFamily" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/company/koshishfamily/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
@@ -20,12 +21,21 @@
   <!-- START THE CONTENT FOR THE CAMPANY INFO -->
   <div class="container mt-5">
     <div class="row text-white justify-content-center mt-3 pb-3">
-      <div class="col-12 col-sm-6 col-lg-6 mx-auto">
+      <div class="col-12 col-sm-6 col-lg-4 mx-auto">
         <h5 class="text-capitalize fw-bold">Koshish Family</h5>
         <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
         <p class="lh-lg">
           A Family for the Underprivileged. Dedicated towards helping children gain education and their overall skills .
         </p>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+        <h5 class="text-capitalize fw-bold">Departments</h5>
+        <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+        <ul class="list-inline campany-list">
+          <li><a href="/pathshala">Pathshala</a></li>
+          <li><a href="/collectdkure">Collection & Distribution</a></li>
+          <li><a href="/arts">Arts & Crafts</a></li>
+        </ul>
       </div>
       <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
         <h5 class="text-capitalize fw-bold">contact</h5>
