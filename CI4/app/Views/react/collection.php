@@ -6,6 +6,20 @@
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Righteous&display=swap");
 
+  /* Define CSS Variables for Color Palette */
+  :root {
+    --color-sapphire-blue: #0F52BA;
+    --color-amber: #FFBF00;
+    --color-sunglow-yellow: #FFCC33;
+    --color-pastel-mint: #B2FBA5;
+    --color-black: #000000;
+    --color-lighter-grey: #A9A9A9;
+    --color-white: #FFFFFF;
+    --color-darker-amber: #CC9900; /* Derived from Amber for contrast */
+    --color-light-yellow: #FFFACD; /* Derived from Sunglow yellow for active background */
+    --color-lighter-blue: #6495ED; /* Used for the large number in timeline slides */
+  }
+
   /* ========== General Design Enhancements ========== */
   .artistic-heading {
     position: relative;
@@ -19,7 +33,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #3b82f6, #1d4ed8, #3b82f6);
+    background: linear-gradient(90deg, var(--color-sapphire-blue), var(--color-sapphire-blue), var(--color-sapphire-blue)); /* Sapphire blue */
     transform: scaleX(0);
     transform-origin: left;
     animation: brushStroke 1s ease-out forwards;
@@ -45,9 +59,9 @@
     top: -50%;
     left: -50%;
     background: radial-gradient(circle at center,
-        rgba(15, 82, 186, 0.8) 0%,
-        rgba(0, 103, 165, 0.6) 30%,
-        rgba(28, 57, 187, 0.4) 60%,
+        rgba(15, 82, 186, 0.8) 0%, /* Sapphire blue with opacity */
+        rgba(15, 82, 186, 0.6) 30%, /* Sapphire blue with opacity */
+        rgba(15, 82, 186, 0.4) 60%, /* Sapphire blue with opacity */
         transparent 70%);
   }
 
@@ -83,7 +97,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(29, 78, 216, 0.1));
+    background: linear-gradient(45deg, rgba(15, 82, 186, 0.1), rgba(15, 82, 186, 0.1)); /* Sapphire blue with opacity */
     transform: translateY(100%);
     transition: transform 0.4s ease-in-out;
   }
@@ -161,68 +175,25 @@
     transform: translate(-50%, -50%) scale(1);
   }
 
-  /* ========== Star Wars Timeline Rope Styling ========== */
-  .starwars .timeline {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 3rem;
-  margin-top: 2rem;
-  padding: 0 2rem;
-}
-
-.starwars .timeline-line {
-  position: absolute;
-  top: 50%;
-  left: 2rem;
-  right: 2rem;
-  height: 8px;
-  margin-top: -4px;
-  background: repeating-linear-gradient(
-    45deg,
-    #b49a5f,
-    #b49a5f 6px,
-    #8c7749 6px,
-    #8c7749 12px
-  );
-  border-radius: 5px;
-  z-index: 0;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-}
-
-.starwars .timeline-line:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, #ffe066, #ffcc00);
-  border-radius: 5px;
-  z-index: 1;
-  transition: width 0.35s ease;
-}
-
-.starwars .timeline-dot {
-  position: relative;
-  z-index: 2;
-  height: 2rem;
-  width: 2rem;
-  background: radial-gradient(circle at 30% 30%, #ffe066 40%, #ffcc00 80%);
-  border: 3px solid #ffda6b;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 </style>
 
 
 <script type="text/babel">
   const App = () => {
+    // Define color constants
+    const COLORS = {
+      sapphireBlue: '#0F52BA',
+      amber: '#FFBF00',
+      sunglowYellow: '#FFCC33',
+      pastelMint: '#B2FBA5',
+      black: '#000000',
+      lighterGrey: '#A9A9A9',
+      white: '#FFFFFF',
+      darkerAmber: '#CC9900', // Derived
+      lightYellow: '#FFFACD', // Derived
+      lighterBlue: '#6495ED', // Used for large number in timeline
+    };
+
     const [countItems, setCountItems] = React.useState(0);
     const [countFamilies, setCountFamilies] = React.useState(0);
     const [countDrives, setCountDrives] = React.useState(0);
@@ -266,7 +237,7 @@
         <DepartmentHeader department={department} title={title} />
         
         {/* Hero */}
-        <div className="wave-bg text-white py-24 px-4 mb-12 relative">
+        <div className="wave-bg text-white py-24 px-4 mb-12 relative" style={{ backgroundColor: COLORS.sapphireBlue }}> {/* Sapphire blue background */}
           <div className="container mx-auto text-center">
             <h1 className="text-5xl font-extrabold mb-6 text-white" style={{ textShadow: '0 0 6px rgba(0,0,0,0.6)', letterSpacing: '0.5px' }}>
               Collection & Distribution
@@ -274,7 +245,7 @@
             <p className="text-2xl mb-8 fade-in" style={{ animationDelay: '0.3s' }}>
               Bridging the Gap Between Need and Support
             </p>
-            <button className="creative-button bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in" style={{ animationDelay: '0.6s', opacity: 0 }}>
+            <button className="creative-button bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in" style={{ animationDelay: '0.6s', opacity: 0, color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
               Get Involved
             </button>
           </div>
@@ -284,19 +255,19 @@
           {/* Mission */}
           <section className="space-y-8 mb-16">
             <div className="text-center md:text-left space-y-4">
-              <h2 className="artistic-heading font-bold text-gray-800" style={{ fontSize: '2.88rem' }}>Our Mission</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto md:mx-0">
+              <h2 className="artistic-heading font-bold text-gray-800" style={{ fontSize: '2.88rem', color: COLORS.black }}>Our Mission</h2> {/* Black text */}
+              <p className="text-gray-600 max-w-3xl mx-auto md:mx-0" style={{ color: COLORS.lighterGrey }}> {/* Lighter grey text */}
                 We are dedicated to collecting and distributing essential amenities to children and families in need...
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
-              <div className="bg-blue-50 p-4 rounded-xl shadow-md fade-in h-full flex flex-col justify-between" style={{ animationDelay: '0.6s' }}>
+              <div className="bg-white p-4 rounded-xl shadow-md fade-in h-full flex flex-col justify-between" style={{ animationDelay: '0.6s' }}> {/* White background */}
                 <h2 className="text-3xl font-bold mb-5">What We Collect</h2>
-                <ul className="grid grid-cols-2 gap-4 text-gray-600">
+                <ul className="grid grid-cols-2 gap-4 text-gray-600" style={{ color: COLORS.lighterGrey }}> {/* Lighter grey text */}
                   {["Educational Materials","Clothing","School Supplies","Food Items","Toys","Books"].map(item => (
                     <li key={item} className="flex items-center">
-                      <i className="fas fa-book text-blue-600 mr-3"></i> {item}
+                      <i className="fas fa-book mr-3" style={{ color: COLORS.sapphireBlue }}></i> {item} {/* Sapphire blue icon */}
                     </li>
                   ))}
                 </ul>
@@ -310,38 +281,38 @@
 
           {/* Impact Counters */}
           <section className="mb-16">
-            <h2 className="artistic-heading text-3xl font-bold text-gray-800 mb-8 text-center fade-in">Our Impact</h2>
+            <h2 className="artistic-heading text-3xl font-bold text-gray-800 mb-8 text-center fade-in" style={{ color: COLORS.black }}>Our Impact</h2> {/* Black text */}
             <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-5xl font-bold text-blue-600 mb-4 stat-number">
+              <div className="bg-white p-8 rounded-xl shadow-lg"> {/* White background */}
+                <div className="text-5xl font-bold mb-4 stat-number" style={{ color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
                   <span>{itemsDone ? '5000+' : countItems}</span>
                 </div>
-                <p className="text-xl text-gray-600">Items Distributed</p>
-                <div className="mt-4"><i className="fas fa-box text-3xl text-blue-400"></i></div>
+                <p className="text-xl text-gray-600" style={{ color: COLORS.lighterGrey }}>Items Distributed</p> {/* Lighter grey text */}
+                <div className="mt-4"><i className="fas fa-box text-3xl" style={{ color: COLORS.sapphireBlue }}></i></div> {/* Sapphire blue icon */}
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-5xl font-bold text-blue-600 mb-4 stat-number">
+              <div className="bg-white p-8 rounded-xl shadow-lg"> {/* White background */}
+                <div className="text-5xl font-bold mb-4 stat-number" style={{ color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
                   <span>{familiesDone ? '1000+' : countFamilies}</span>
                 </div>
-                <p className="text-xl text-gray-600">Families Helped</p>
-                <div className="mt-4"><i className="fas fa-users text-3xl text-blue-400"></i></div>
+                <p className="text-xl text-gray-600" style={{ color: COLORS.lighterGrey }}>Families Helped</p> {/* Lighter grey text */}
+                <div className="mt-4"><i className="fas fa-users text-3xl" style={{ color: COLORS.sapphireBlue }}></i></div> {/* Sapphire blue icon */}
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-5xl font-bold text-blue-600 mb-4 stat-number">
+              <div className="bg-white p-8 rounded-xl shadow-lg"> {/* White background */}
+                <div className="text-5xl font-bold mb-4 stat-number" style={{ color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
                   <span>{drivesDone ? '50+' : countDrives}</span>
                 </div>
-                <p className="text-xl text-gray-600">Collection Drives</p>
-                <div className="mt-4"><i className="fas fa-hand-holding-heart text-3xl text-blue-400"></i></div>
+                <p className="text-xl text-gray-600" style={{ color: COLORS.lighterGrey }}>Collection Drives</p> {/* Lighter grey text */}
+                <div className="mt-4"><i className="fas fa-hand-holding-heart text-3xl" style={{ color: COLORS.sapphireBlue }}></i></div> {/* Sapphire blue icon */}
               </div>
             </div>
           </section>
 
           {/* Timeline */}
-          <section className="bg-blue-50 py-16 rounded-xl mb-16">
+          <section className="bg-blue-50 py-16 rounded-xl mb-16"> {/* White background */}
             <div className="max-w-7xl mx-auto px-6">
-              <h2 className="text-4xl font-bold text-center mb-16 text-blue-700">Our Impact Journey</h2>
+              <h2 className="text-4xl font-bold text-center mb-16" style={{ color: COLORS.sapphireBlue }}>Our Impact Journey</h2> {/* Sapphire blue text */}
               
               <div className="timeline-container">
                 {/* Radio buttons for each timeline item */}
@@ -363,8 +334,8 @@
                       <React.Fragment key={index}>
                         {/* Remove the 'active' class here, CSS handles it based on :checked */}
                         <label htmlFor={`timeline-${index + 1}`} className="timeline-nav-dot">
-                          <span className="timeline-year">{index + 1}</span> {/* Use index + 1 for numbering */}
-                          <span className="timeline-label">{item.title}</span> {/* Use title from data */}
+                          <span className="timeline-year" style={{ color: COLORS.sapphireBlue }}>{index + 1}</span> {/* Sapphire blue number */}
+                          <span className="timeline-label" style={{ color: COLORS.lighterGrey }}>{item.title}</span> {/* Lighter grey label */}
                         </label>
                         {index < timelineData.length - 1 && <div className="timeline-nav-line"></div>}
                       </React.Fragment>
@@ -379,10 +350,10 @@
                       <div className="grid md:grid-cols-2 gap-12 items-center">
                         {/* Content for each slide */}
                         <div>
-                          <div className="text-6xl font-bold text-blue-200 mb-4">{index + 1}</div> {/* Use index + 1 for numbering */}
-                          <h3 className="text-3xl font-bold text-blue-800 mb-4">{item.title}</h3> {/* Use title from data */}
-                          <p className="text-lg text-gray-700 mb-6">
-                            {item.content} {/* Use content from data */}
+                          <div className="text-6xl font-bold mb-4" style={{ color: COLORS.lighterBlue }}>{index + 1}</div> {/* Lighter blue number */}
+                          <h3 className="text-3xl font-bold mb-4" style={{ color: COLORS.sapphireBlue }}>{item.title}</h3> {/* Sapphire blue title */}
+                          <p className="text-lg mb-6" style={{ color: COLORS.lighterGrey }}>
+                            {item.content} {/* Lighter grey content */}
                           </p>
                         </div>
                         {/* Image for each slide */}
@@ -398,8 +369,8 @@
           </section>
 
           {/* Process */}
-          <section className="bg-blue-50 rounded-xl p-12 mb-16">
-            <h2 className="artistic-heading text-3xl font-bold text-gray-800 mb-8 text-center fade-in">From You to Them</h2>
+          <section className="bg-white rounded-xl p-12 mb-16"> {/* White background */}
+            <h2 className="artistic-heading text-3xl font-bold text-gray-800 mb-8 text-center fade-in" style={{ color: COLORS.black }}>From You to Them</h2> {/* Black text */}
             <div className="grid md:grid-cols-4 gap-6">
               {[
                 { icon: "box-open", title: "Collection", desc: "We collect donations from generous contributors" },
@@ -407,12 +378,12 @@
                 { icon: "tasks", title: "Organization", desc: "We organize items based on needs" },
                 { icon: "gift", title: "Distribution", desc: "We distribute to those in need" },
               ].map((step, i) => (
-                <div key={i} className="process-card bg-white p-8 rounded-xl shadow-lg text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i className={`fas fa-${step.icon} text-2xl text-blue-600 process-icon`}></i>
+                <div key={i} className="process-card bg-white p-8 rounded-xl shadow-lg text-center"> {/* White background */}
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: COLORS.pastelMint }}> {/* Pastel mint background for highlight */}
+                    <i className={`fas fa-${step.icon} text-2xl`} style={{ color: COLORS.sapphireBlue }}></i> {/* Sapphire blue icon */}
                   </div>
                   <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-gray-600">{step.desc}</p>
+                  <p className="text-gray-600" style={{ color: COLORS.lighterGrey }}>{step.desc}</p> {/* Lighter grey text */}
                 </div>
               ))}
             </div>
