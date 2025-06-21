@@ -8,7 +8,7 @@
       <!-- START THE CONTENT FOR THE INTRO  -->
       <div class="col-md-6 intros text-start">
         <h1 class="display-2">
-          <span class="display-2--intro">Hey!, We're Koshish Family</span>
+          <span class="display-2--intro">Hey! We're Koshish Family</span>
           <span class="display-2--description lh-base">
             A Family for the Underprivileged. Dedicated towards helping children gain education and their overall skills 
           </span>
