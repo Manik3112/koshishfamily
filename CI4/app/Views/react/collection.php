@@ -55,7 +55,7 @@
     content: '';
     position: absolute;
     width: 200%;
-    height: 200%;
+    height: 100%;
     top: -50%;
     left: -50%;
     background: radial-gradient(circle at center,
@@ -238,7 +238,7 @@
         
         {/* Hero */}
         <div className="wave-bg text-white py-24 px-4 mb-12 relative" style={{ backgroundColor: COLORS.sapphireBlue }}> {/* Sapphire blue background */}
-          <div className="container mx-auto text-center">
+          <div className="relative z-10 container mx-auto text-center"> {/* Added relative positioning and z-index */}
             <h1 className="text-5xl font-extrabold mb-6 text-white" style={{ textShadow: '0 0 6px rgba(0,0,0,0.6)', letterSpacing: '0.5px' }}>
               Collection & Distribution
             </h1>
