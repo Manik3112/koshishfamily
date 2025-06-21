@@ -34,7 +34,7 @@
         <ul class="list-inline campany-list">
           <li><a href="/pathshala">Pathshala</a></li>
           <li><a href="/collectdkure">Collection & Distribution</a></li>
-          <li><a href="/arts">Arts & Crafts</a></li>
+          <li><a href="/art-and-craft">Arts & Crafts</a></li>
         </ul>
       </div>
       <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">

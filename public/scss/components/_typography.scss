@@ -32,7 +32,7 @@
     height: 0.1rem;
     display: block;
     margin: 0 auto;
-    background-color: $primary;
+    background-color: $primary-gradient;
 }
 .heading-line::after {
     content: "";
@@ -42,7 +42,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 1rem;
-    background-color: $primary;
+    background-color:$primary-gradient;
 }
 
 // DISPLAY 3 
@@ -55,7 +55,7 @@
         font-weight: 600;
         font-family: 'Poppins', sans-serif;
         display: inline-block;
-        background-image: linear-gradient(to right, $primary, $secondary);
+        background-image: linear-gradient(to right, $primary-gradient, $secondary);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -81,5 +81,5 @@
 
 // GRADIENT BG 
 .gradient  {
-    background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+    background: linear-gradient(to right, rgba($primary-gradient, 0.95), rgba($secondary, 0.95));
 }

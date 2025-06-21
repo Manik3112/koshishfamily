@@ -10,4 +10,4 @@ $routes->get('/team', 'Home::memberPage');
 
 $routes->get('/pathshala', 'React::pathshala');
 $routes->get('/collectdkure', 'React::collection');
-$routes->get('/arts', 'React::arts');
+$routes->get('/art-and-craft', 'React::arts');
