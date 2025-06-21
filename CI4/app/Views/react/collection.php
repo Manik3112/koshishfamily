@@ -2,6 +2,7 @@
 <?php include(APPPATH . 'Views/react/components/DepartmentHeader.php'); ?>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="/assets/css/timeline.css" rel="stylesheet">
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Righteous&display=swap");
 
@@ -346,24 +347,119 @@
 
           {/* Timeline */}
           <section className="bg-blue-50 py-16 rounded-xl mb-16">
-          <div class="starwars">
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-dot"></div>
-            </div>
-            </div>
-
             <div className="max-w-7xl mx-auto px-6">
-              <h2 className="text-4xl font-bold text-center mb-16 text-blue-700">Our Impact Timeline</h2>
-              <div className="grid md:grid-cols-2 gap-10">
-                {timelineData.map((item, idx) => (
-                  <div key={idx} className="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-600">{item.content}</p>
+              <h2 className="text-4xl font-bold text-center mb-16 text-blue-700">Our Impact Journey</h2>
+              
+              <div className="timeline-container">
+                <input type="radio" name="timeline" id="timeline-1" defaultChecked className="timeline-radio" />
+                <input type="radio" name="timeline" id="timeline-2" className="timeline-radio" />
+                <input type="radio" name="timeline" id="timeline-3" className="timeline-radio" />
+                
+                {/* Timeline Navigation */}
+                <div className="timeline-nav flex justify-center mb-12">
+                  <div className="relative flex items-center space-x-8">
+                    <label htmlFor="timeline-1" className="timeline-nav-dot active">
+                      <span className="timeline-year">2021</span>
+                      <span className="timeline-label">Foundation</span>
+                    </label>
+                    <div className="timeline-nav-line"></div>
+                    <label htmlFor="timeline-2" className="timeline-nav-dot">
+                      <span className="timeline-year">2022</span>
+                      <span className="timeline-label">Expansion</span>
+                    </label>
+                    <div className="timeline-nav-line"></div>
+                    <label htmlFor="timeline-3" className="timeline-nav-dot">
+                      <span className="timeline-year">2025</span>
+                      <span className="timeline-label">Future</span>
+                    </label>
                   </div>
-                ))}
+                </div>
+                
+                {/* Timeline Content */}
+                <div className="timeline-content">
+                  <div className="timeline-slide timeline-slide-1">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                      <div>
+                        <div className="text-6xl font-bold text-blue-200 mb-4">2021</div>
+                        <h3 className="text-3xl font-bold text-blue-800 mb-4">Foundation & Growth</h3>
+                        <p className="text-lg text-gray-700 mb-6">
+                          Started our collection drives in 12 key areas across Doon including DIT, Malsi, Sahastradhara, ISBT, and Ghantaghar, establishing a strong foundation for community outreach.
+                        </p>
+                        <div className="flex items-center space-x-4">
+                          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i className="fas fa-seedling text-2xl text-blue-600"></i>
+                          </div>
+                          <div>
+                            <div className="text-2xl font-bold text-blue-600">12</div>
+                            <div className="text-sm text-gray-600">Areas Covered</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="/images/event/event-1.jpg" alt="Foundation" className="rounded-xl shadow-lg w-full h-80 object-cover" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="timeline-slide timeline-slide-2">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                      <div>
+                        <div className="text-6xl font-bold text-blue-200 mb-4">2022</div>
+                        <h3 className="text-3xl font-bold text-blue-800 mb-4">Expansion & Impact</h3>
+                        <p className="text-lg text-gray-700 mb-6">
+                          Reached 10,800 people and distributed 144,000 items including clothes, stationery, sanitary pads, medicines, and essential supplies across our network.
+                        </p>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                              <i className="fas fa-users text-blue-600"></i>
+                            </div>
+                            <div>
+                              <div className="text-xl font-bold text-blue-600">10,800</div>
+                              <div className="text-sm text-gray-600">People Reached</div>
+                            </div>
+                          </div>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                              <i className="fas fa-box text-blue-600"></i>
+                            </div>
+                            <div>
+                              <div className="text-xl font-bold text-blue-600">144,000</div>
+                              <div className="text-sm text-gray-600">Items Distributed</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="/images/event/event-2.jpg" alt="Expansion" className="rounded-xl shadow-lg w-full h-80 object-cover" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="timeline-slide timeline-slide-3">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                      <div>
+                        <div className="text-6xl font-bold text-blue-200 mb-4">2025</div>
+                        <h3 className="text-3xl font-bold text-blue-800 mb-4">Sustainable Future</h3>
+                        <p className="text-lg text-gray-700 mb-6">
+                          Established regular health camps, yoga sessions, dental camps, and awareness programs with monthly and annual schedules for sustained community development.
+                        </p>
+                        <div className="flex items-center space-x-4">
+                          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i className="fas fa-heart text-2xl text-blue-600"></i>
+                          </div>
+                          <div>
+                            <div className="text-2xl font-bold text-blue-600">Monthly</div>
+                            <div className="text-sm text-gray-600">Health Camps</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="/images/event/event-3.jpg" alt="Future" className="rounded-xl shadow-lg w-full h-80 object-cover" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
