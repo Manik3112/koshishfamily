@@ -5,9 +5,9 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
     const getThemeClasses = () => {
         const themes = {
             'art-and-craft': {
-                bgColor: 'bg-blue-600',
+                bgColor: 'bg-amber-600',
                 textColor: 'text-white',
-                hoverColor: 'hover:bg-blue-700'
+                hoverColor: 'hover:bg-amber-700'
             },
             'pathshala': {
                 bgColor: 'bg-green-600',
@@ -15,9 +15,9 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
                 hoverColor: 'hover:bg-green-700'
             },
             'collectdkure': {
-                bgColor: 'bg-orange-600',
+                bgColor: 'bg-blue-600',
                 textColor: 'text-white',
-                hoverColor: 'hover:bg-orange-700'
+                hoverColor: 'hover:bg-blue-700'
             },
             'hr': {
                 bgColor: 'bg-red-600',
@@ -62,10 +62,10 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
     };
     
     return (
-        <nav className={`sticky flex flex-wrap items-center justify-between px-2 py-3 ${theme.bgColor} ${theme.textColor} shadow fixed-top w-full`}>
+        <nav className={`sticky z-[100000] flex flex-wrap items-center justify-between px-2 py-3 ${theme.bgColor} ${theme.textColor} shadow-lg fixed top-0 w-full`}>
             <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                 <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                    <a className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase" href={backLink}>
+                    <a className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase tracking-wide" href={backLink}>
                         <img src={`${baseUrl}images/arts/logo.png`} alt="logo image" className="mr-2 h-10 inline-block" />
                         <b>Koshish Family</b>
                     </a>
