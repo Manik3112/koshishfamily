@@ -333,7 +333,16 @@
                     {timelineData.map((item, index) => (
                       <React.Fragment key={index}>
                         {/* Remove the 'active' class here, CSS handles it based on :checked */}
-                        <label htmlFor={`timeline-${index + 1}`} className="timeline-nav-dot">
+                        <label
+                          htmlFor={`timeline-${index + 1}`}
+                          className="timeline-nav-dot"
+                          onClick={(e) => {
+                            // Prevent default scroll behavior
+                            e.preventDefault();
+                            // Manually check the radio button
+                            document.getElementById(`timeline-${index + 1}`).checked = true;
+                          }}
+                        >
                           <span className="timeline-year" style={{ color: COLORS.sapphireBlue }}>{index + 1}</span> {/* Sapphire blue number */}
                           <span className="timeline-label" style={{ color: COLORS.lighterGrey }}>{item.title}</span> {/* Lighter grey label */}
                         </label>
@@ -342,7 +351,6 @@
                     ))}
                   </div>
                 </div>
-                
                 {/* Timeline Content */}
                 <div className="timeline-content">
                   {timelineData.map((item, index) => (
