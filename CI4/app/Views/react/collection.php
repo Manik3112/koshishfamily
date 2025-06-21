@@ -88,13 +88,6 @@
     transition: transform 0.4s ease-in-out;
   }
 
-  .process-card:hover {
-    transform: translateY(-10px);
-  }
-
-  .process-card:hover::before {
-    transform: translateY(0);
-  }
 
   .process-icon {
     transition: all 0.3s ease;
