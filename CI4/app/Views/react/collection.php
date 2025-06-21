@@ -1,3 +1,6 @@
+<!-- Include Header Component -->
+<?php include(APPPATH . 'Views/react/components/DepartmentHeader.php'); ?>
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Righteous&display=swap");
@@ -232,6 +235,9 @@
     const [itemsDone, setItemsDone] = React.useState(false);
     const [familiesDone, setFamiliesDone] = React.useState(false);
     const [drivesDone, setDrivesDone] = React.useState(false);
+    
+    const department = 'collectdkure';
+    const title = 'Collection & Distribution';
 
     React.useEffect(() => {
       const animateCounter = (current, set, target, doneSetter) => {
@@ -263,6 +269,8 @@
 
     return (
       <div>
+        <DepartmentHeader department={department} title={title} />
+        
         {/* Hero */}
         <div className="wave-bg text-white py-24 px-4 mb-12 relative">
           <div className="container mx-auto text-center">
@@ -384,6 +392,4 @@
       </div>
     );
   };
-  
-  ReactDOM.render(<App />, document.getElementById('root'));
 </script>

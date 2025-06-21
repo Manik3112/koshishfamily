@@ -1,3 +1,6 @@
+<!-- Include Header Component -->
+<?php include(APPPATH . 'Views/react/components/DepartmentHeader.php'); ?>
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
     .carousel {
@@ -130,7 +133,9 @@
 
   const App = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    const department = 'pathshala';
+    const title = 'Pathshala';
+    
     const images = [
       "/images/arts/our_products1.jpeg",
       "/images/arts/our_products2.jpeg",
@@ -153,6 +158,8 @@
 
   return (
     <div>
+        <DepartmentHeader department={department} title={title} />
+        
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-green-400 text-white py-20 px-4 mb-12">
           <div className="container mx-auto text-center">
@@ -374,10 +381,4 @@
       </div>
     );
   };
-
-    document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(<App />, document.getElementById("root"));
-    });
 </script>
-
-<div id="root" style="margin-top: 80px;"></div>
