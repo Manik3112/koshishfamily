@@ -1,3 +1,6 @@
+<!-- Include Header Component -->
+<?php include(APPPATH . 'Views/react/components/DepartmentHeader.php'); ?>
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 <style>
@@ -199,6 +202,9 @@
 
 <script type="text/babel">
     const App = () => {
+        const department = 'art-and-craft';
+        const title = 'Arts & Crafts';
+        
         const artworks = [
             { src: "/images/arts/our_products1.jpeg", title: "Traditional Art" },
             { src: "/images/arts/our_products2.jpeg", title: "Modern Crafts" },
@@ -225,6 +231,8 @@
 
         return (
             <div>
+                <DepartmentHeader department={department} title={title} />
+                
                 <div className="paint-splash text-white py-24 px-4 mb-12 relative">
                     <div className="container mx-auto text-center">
                         <h1 className="text-5xl font-bold mb-6 fade-in">Arts & Crafts</h1>
