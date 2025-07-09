@@ -564,7 +564,7 @@ function openModal(index) {
 .timeline-year {
   font-size: 24px;
   font-weight: bold;
-  color: #ff9800;
+  color: var(--bs-primary);
   margin-bottom: 5px;
 }
 
@@ -583,7 +583,7 @@ function openModal(index) {
 .btn-more {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #ff9800;
+  background-color: var(--bs-primary);
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -591,7 +591,7 @@ function openModal(index) {
 }
 
 .btn-more:hover {
-  background-color: #f57c00;
+  background-color: var(--bs-secondary);
 }
 
 .modal {
@@ -633,15 +633,15 @@ function openModal(index) {
 
 /* Customizing Slick Slider */
 .slick-prev:before, .slick-next:before {
-  color: #ff9800;
+  color: var(--bs-primary);
 }
 
 .slick-dots li button:before {
   font-size: 12px;
-  color: #ff9800;
+  color: var(--bs-primary);
 }
 
 .slick-dots li.slick-active button:before {
-  color: #f57c00;
+  color: var(--bs-cyan);
 }
 </style>

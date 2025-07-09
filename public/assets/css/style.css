@@ -11309,7 +11309,7 @@ fieldset:disabled .btn {
   height: 0.1rem;
   display: block;
   margin: 0 auto;
-  background-color: #9926f0;
+  background-color:var(--bs-primary);
 }
 
 .heading-line::after {
@@ -11320,7 +11320,7 @@ fieldset:disabled .btn {
   display: block;
   margin: 0 auto;
   margin-bottom: 1rem;
-  background-color: #9926f0;
+  background-color:var(--bs-primary);
 }
 
 .display-3 {
