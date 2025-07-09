@@ -16,7 +16,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0d6efd;
+  --bs-blue: #2196f3;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d122e3;
@@ -29,8 +29,8 @@
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
-  --bs-primary: #9926f0;
-  --bs-secondary: #d122e3;
+  --bs-primary: #2196f3;
+  --bs-secondary: #616161;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -78,13 +78,13 @@
   --kf-black-7: rgba(0, 0, 0, 0.7);
   --kf-black-9: rgba(0, 0, 0, 0.9);
 
-  --kf-primary-25: rgba(153, 38, 240, 0.25);
-  --kf-primary-5: rgba(153, 38, 240, 0.5);
-  --kf-primary-7: rgba(153, 38, 240, 0.7);
+  --kf-primary-25: rgba(33, 150, 243, 0.25);
+  --kf-primary-5: rgba(33, 150, 243, 0.5);
+  --kf-primary-7: rgba(33, 150, 243, 0.7);
 
-  --kf-secondary-5: rgba(209, 34, 227, 0.5);
-  --kf-secondary-transparent: rgba(178, 29, 193, 0.5);
-  --kf-secondary-light: rgba(168, 71, 242, 0.5);
+  --kf-secondary-5: rgba(97, 97, 97, 0.5);
+  --kf-secondary-transparent: rgba(97, 97, 97, 0.5);
+  --kf-secondary-light: rgba(97, 97, 97, 0.5);
 
   --kf-success-25: rgba(25, 135, 84, 0.25);
   --kf-success-5: rgba(25, 135, 84, 0.5);
@@ -111,10 +111,10 @@
   --kf-gray-75: rgba(64, 64, 64, 0.75);
 
   /* Custom Color Variables */
-  --kf-primary-gradient-start: #9926f0;
-  --kf-primary-gradient-end: #b560f8;
-  --kf-accent-yellow: #a540f2;
-  --kf-menu-background: #8f30db;
+  --kf-primary-gradient-start: #2196f3;
+  --kf-primary-gradient-end: #64b5f6;
+  --kf-accent-yellow: #00bcd4;
+  --kf-menu-background: #2196f3;
   --kf-text-white: #fff;
   --kf-text-black: #000;
   --kf-text-muted: #6c757d;
@@ -127,16 +127,12 @@
   --kf-overlay-black: var(--kf-black-6);
   --kf-overlay-white: var(--kf-white-8);
   --kf-primary-transparent: var(--kf-primary-7);
-  --kf-portfolio-border: #b75af3;
+  --kf-portfolio-border: #00bcd4;
   --kf-testimonials-card-bg: var(--kf-white-8);
-  --kf-testimonials-border: var(--kf-primary-7);
-  --kf-testimonials-icon: var(--kf-primary-7);
-  --kf-testimonials-bg: linear-gradient(
-    to left,
-    rgb(153, 38, 240),
-    rgba(181, 96, 248)
-  );
-  --kf-services-icon: #9926f0;
+  --kf-testimonials-border: var(--kf-highlight-color);
+  --kf-testimonials-icon: #00bcd4;
+  --kf-testimonials-bg: linear-gradient(to left, #2196f3, #64b5f6);
+  --kf-services-icon: #00bcd4;
   --kf-primary-gradient: linear-gradient(
     to right,
     var(--kf-primary-gradient-start),
@@ -147,14 +143,14 @@
   --kf-body-text: #212529;
   --kf-body-bg: #fff;
   --kf-mark-bg: #fcf8e3;
-  --kf-link-hover: #7a1ec0;
-  --kf-code-text: #d122e3;
+  --kf-link-hover: #1976d2;
+  --kf-code-text: #616161;
   --kf-kbd-text: #fff;
   --kf-kbd-bg: #212529;
   --kf-caption-text: #6c757d;
   --kf-border-color: #dee2e6;
   --kf-form-border: #ced4da;
-  --kf-form-focus-border: #cc93f8;
+  --kf-form-focus-border: #2196f3;
   --kf-form-bg: #fff;
   --kf-form-disabled-bg: #e9ecef;
   --kf-form-file-bg: #e9ecef;
@@ -162,10 +158,10 @@
   --kf-form-placeholder: #6c757d;
   --kf-form-text-shadow: #212529;
   --kf-form-check-bg: #fff;
-  --kf-form-check-checked-bg: #9926f0;
-  --kf-form-check-checked-border: #9926f0;
-  --kf-form-range-thumb-bg: #9926f0;
-  --kf-form-range-thumb-active: #e0befb;
+  --kf-form-check-checked-bg: #2196f3;
+  --kf-form-check-checked-border: #2196f3;
+  --kf-form-range-thumb-bg: #2196f3;
+  --kf-form-range-thumb-active: #64b5f6;
   --kf-form-range-track-bg: #dee2e6;
   --kf-form-range-disabled-thumb: #adb5bd;
   --kf-input-group-text-bg: #e9ecef;
@@ -174,14 +170,14 @@
   --kf-invalid-text: #dc3545;
   --kf-invalid-bg: var(--kf-danger-9);
   --kf-btn-text: #212529;
-  --kf-btn-primary-hover-bg: #8220cc;
-  --kf-btn-primary-hover-border: #7a1ec0;
-  --kf-btn-primary-active-bg: #7a1ec0;
-  --kf-btn-primary-active-border: #731db4;
-  --kf-btn-secondary-bg: #d122e3;
-  --kf-btn-secondary-hover-bg: #d843e7;
-  --kf-btn-secondary-hover-border: #d638e6;
-  --kf-btn-secondary-active-bg: #da4ee9;
+  --kf-btn-primary-hover-bg: #616161;
+  --kf-btn-primary-hover-border: #616161;
+  --kf-btn-primary-active-bg: #616161;
+  --kf-btn-primary-active-border: #616161;
+  --kf-btn-secondary-bg: #616161;
+  --kf-btn-secondary-hover-bg: #757575;
+  --kf-btn-secondary-hover-border: #757575;
+  --kf-btn-secondary-active-bg: #757575;
   --kf-btn-success-bg: #198754;
   --kf-btn-success-hover-bg: #157347;
   --kf-btn-success-hover-border: #146c43;
