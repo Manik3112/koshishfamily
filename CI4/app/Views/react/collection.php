@@ -225,11 +225,11 @@
     }, [countItems, countFamilies, countDrives, itemsDone, familiesDone, drivesDone]);
 
     const timelineData = [
-      { title: "Places Touched", content: "12 areas in Doon: DIT, Malsi, Sahastradhara, ISBT, Ghantaghar, ONGC, etc." },
-      { title: "People Reached", content: "10,800 people reached – approx. 900/year." },
-      { title: "Clothes/Blankets", content: "1,44,000 items – 1200/year distributed." },
-      { title: "Distribution Drives", content: "Clothes, Stationery, Sanitary Pads, Medicines, Dustbins, Fruits, Accessories." },
-      { title: "Awareness Camps", content: "Health, Yoga, Dental camps & awareness sessions monthly/annually." },
+      { title: "Places Touched", icon: "map-marker-alt", content: "12 areas in Doon: DIT, Malsi, Sahastradhara, ISBT, Ghantaghar, ONGC, etc." },
+      { title: "People Reached", icon: "users", content: "10,800 people reached – approx. 900/year." },
+      { title: "Clothes/Blankets", icon: "tshirt", content: "1,44,000 items – 1200/year distributed." },
+      { title: "Distribution Drives", icon: "truck", content: "Clothes, Stationery, Sanitary Pads, Medicines, Dustbins, Fruits, Accessories." },
+      { title: "Awareness Camps", icon: "bullhorn", content: "Health, Yoga, Dental camps & awareness sessions monthly/annually." },
     ];
 
     return (
@@ -263,8 +263,8 @@
 
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
               <div className="bg-white p-4 rounded-xl shadow-md fade-in h-full flex flex-col justify-between" style={{ animationDelay: '0.6s' }}> {/* White background */}
-                <h2 className="text-3xl font-bold mb-5">What We Collect</h2>
-                <ul className="grid grid-cols-2 gap-4 text-gray-600" style={{ color: COLORS.lighterGrey }}> {/* Lighter grey text */}
+                <h2 className="text-3xl font-bold mb-1">What We Collect</h2>
+                <ul className="grid grid-cols-2 gap-4 text-gray-600 content-center mb-5" style={{ color: COLORS.lighterGrey }}> {/* Lighter grey text */}
                   {["Educational Materials","Clothing","School Supplies","Food Items","Toys","Books"].map(item => (
                     <li key={item} className="flex items-center">
                       <i className="fas fa-book mr-3" style={{ color: COLORS.sapphireBlue }}></i> {item} {/* Sapphire blue icon */}
@@ -310,92 +310,70 @@
           </section>
 
           {/* Timeline */}
-          <section className="bg-blue-50 py-16 rounded-xl mb-16"> {/* White background */}
-            <div className="max-w-7xl mx-auto px-6">
-              <h2 className="text-4xl font-bold text-center mb-16" style={{ color: COLORS.sapphireBlue }}>Our Impact Journey</h2> {/* Sapphire blue text */}
-              
-              <div className="timeline-container">
-                {/* Radio buttons for each timeline item */}
-                {timelineData.map((item, index) => (
-                  <input
-                    key={index}
-                    type="radio"
-                    name="timeline"
-                    id={`timeline-${index + 1}`}
-                    defaultChecked={index === 0}
-                    className="timeline-radio"
-                  />
-                ))}
-                
-                {/* Timeline Navigation */}
-                <div className="timeline-nav flex justify-center mb-12">
-                  <div className="relative flex items-center space-x-8">
-                    {timelineData.map((item, index) => (
-                      <React.Fragment key={index}>
-                        {/* Remove the 'active' class here, CSS handles it based on :checked */}
-                        <label
-                          htmlFor={`timeline-${index + 1}`}
-                          className="timeline-nav-dot"
-                          onClick={(e) => {
-                            // Prevent default scroll behavior
-                            e.preventDefault();
-                            // Manually check the radio button
-                            document.getElementById(`timeline-${index + 1}`).checked = true;
-                          }}
-                        >
-                          <span className="timeline-year" style={{ color: COLORS.sapphireBlue }}>{index + 1}</span> {/* Sapphire blue number */}
-                          <span className="timeline-label" style={{ color: COLORS.lighterGrey }}>{item.title}</span> {/* Lighter grey label */}
-                        </label>
-                        {index < timelineData.length - 1 && <div className="timeline-nav-line"></div>}
-                      </React.Fragment>
-                    ))}
-                  </div>
-                </div>
-                {/* Timeline Content */}
-                <div className="timeline-content">
+           {/* Timeline */}
+        <section className="bg-blue-50 py-16 rounded-xl mb-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center mb-16" style={{ color: COLORS.sapphireBlue }}>Our Impact Journey</h2>
+            
+            <div className="timeline-container">
+              {/* Radio buttons */}
+              {timelineData.map((item, index) => (
+                <input
+                  key={index}
+                  type="radio"
+                  name="timeline"
+                  id={`timeline-${index + 1}`}
+                  defaultChecked={index === 0}
+                  className="timeline-radio"
+                />
+              ))}
+
+              {/* Navigation Dots */}
+              <div className="timeline-nav flex justify-start mb-12">
+                <div className="relative flex items-center space-x-8">
                   {timelineData.map((item, index) => (
-                    <div key={index} className={`timeline-slide timeline-slide-${index + 1}`}>
-                      <div className="grid md:grid-cols-2 gap-12 items-center">
-                        {/* Content for each slide */}
-                        <div>
-                          <div className="text-6xl font-bold mb-4" style={{ color: COLORS.lighterBlue }}>{index + 1}</div> {/* Lighter blue number */}
-                          <h3 className="text-3xl font-bold mb-4" style={{ color: COLORS.sapphireBlue }}>{item.title}</h3> {/* Sapphire blue title */}
-                          <p className="text-lg mb-6" style={{ color: COLORS.lighterGrey }}>
-                            {item.content} {/* Lighter grey content */}
-                          </p>
-                        </div>
-                        {/* Image for each slide */}
-                        <div>
-                          <img src={`/images/event/event-${index + 1}.jpg`} alt={`Timeline Image ${index + 1}`} className="rounded-xl shadow-lg w-full h-80 object-cover" />
-                        </div>
-                      </div>
-                    </div>
+                    <React.Fragment key={index}>
+                      <label
+                        htmlFor={`timeline-${index + 1}`}
+                        className="timeline-nav-dot"
+                        onMouseEnter={(e) => {
+                          e.preventDefault();
+                          document.getElementById(`timeline-${index + 1}`).checked = true;
+                        }}
+                      >
+                        <i className={`fas fa-${item.icon} text-xl`} style={{ color: COLORS.sapphireBlue }}></i>
+                        <span className="timeline-label" style={{ color: COLORS.lighterGrey }}>{item.title}</span>
+                      </label>
+                      {index < timelineData.length - 1 && <div className="timeline-nav-line"></div>}
+                    </React.Fragment>
                   ))}
                 </div>
               </div>
-            </div>
-          </section>
 
-          {/* Process */}
-          <section className="bg-white rounded-xl p-12 mb-16"> {/* White background */}
-            <h2 className="artistic-heading text-3xl font-bold text-gray-800 mb-8 text-center fade-in" style={{ color: COLORS.black }}>From You to Them</h2> {/* Black text */}
-            <div className="grid md:grid-cols-4 gap-6">
-              {[
-                { icon: "box-open", title: "Collection", desc: "We collect donations from generous contributors" },
-                { icon: "search", title: "Assessment", desc: "We evaluate and sort the collected items" },
-                { icon: "tasks", title: "Organization", desc: "We organize items based on needs" },
-                { icon: "gift", title: "Distribution", desc: "We distribute to those in need" },
-              ].map((step, i) => (
-                <div key={i} className="process-card bg-white p-8 rounded-xl shadow-lg text-center"> {/* White background */}
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: COLORS.pastelMint }}> {/* Pastel mint background for highlight */}
-                    <i className={`fas fa-${step.icon} text-2xl`} style={{ color: COLORS.sapphireBlue }}></i> {/* Sapphire blue icon */}
+              {/* Content Slides */}
+              <div className="timeline-content">
+                {timelineData.map((item, index) => (
+                  <div key={index} className={`timeline-slide timeline-slide-${index + 1}`}>
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                      <div>
+                        <div className="text-6xl font-bold mb-4" style={{ color: COLORS.lighterBlue }}>
+                          <i className={`fas fa-${item.icon}`}></i>
+                        </div>
+                        <h3 className="text-3xl font-bold mb-4" style={{ color: COLORS.sapphireBlue }}>{item.title}</h3>
+                        <p className="text-lg mb-6" style={{ color: COLORS.lighterGrey }}>
+                          {item.content}
+                        </p>
+                      </div>
+                      <div>
+                        <img src={`/images/event/event-${index + 1}.jpg`} alt={`Timeline Image ${index + 1}`} className="rounded-xl shadow-lg w-full h-80 object-cover" />
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-gray-600" style={{ color: COLORS.lighterGrey }}>{step.desc}</p> {/* Lighter grey text */}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </section>
+          </div>
+        </section>
         </div>
       </div>
     );
