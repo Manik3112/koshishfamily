@@ -5,21 +5,22 @@
 
 <style>
     .creativeimg img {
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
+        height: 500px;
+        width: min-content;
+        object-fit: contain;
         display: block;
+        margin: 0 auto;
     }
 
     @media (min-width: 768px) {
         .creativeimg img {
-            height: 300px;
+            height: 700px;
         }
     }
 
     @media (min-width: 992px) {
         .creativeimg img {
-            height: 400px;
+            height: 600px;
         }
     }
 
@@ -302,11 +303,10 @@
                             </div>
                         </div>
                         <div class="creativeimg">
-                        // resize
                             <img 
                                 src="/images/arts/intro-section-illustration1.png" 
                                 alt="Creative Arts" 
-                                className="rounded-xl shadow-xl floating"
+                                className="rounded-xl shadow-xl floating object-contain!"
                             />
                         </div>
                     </div>
@@ -374,8 +374,6 @@
                     </div>
 </section>
 
-
-// add matrix bg to the section
 
                 <section className="text-center mb-16 max-w-4xl mx-auto">
                     <h2 className="artistic-heading text-4xl font-bold text-gray-800 mb-6 fade-in">Join Our Creative Community</h2>

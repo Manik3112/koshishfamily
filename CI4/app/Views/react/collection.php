@@ -194,6 +194,8 @@
       lighterBlue: '#6495ED', // Used for large number in timeline
     };
 
+    const donation = "https://forms.gle/R5NvNZdiupQ7V6L18";
+
     const [countItems, setCountItems] = React.useState(0);
     const [countFamilies, setCountFamilies] = React.useState(0);
     const [countDrives, setCountDrives] = React.useState(0);
@@ -245,9 +247,9 @@
             <p className="text-2xl mb-8 fade-in" style={{ animationDelay: '0.3s' }}>
               Bridging the Gap Between Need and Support
             </p>
-            <button className="creative-button bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in" style={{ animationDelay: '0.6s', opacity: 0, color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
+            <a href={donation} target="_blank" rel="noopener noreferrer" className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in" style={{ animationDelay: '0.6s', opacity: 0, color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
               Get Involved
-            </button>
+            </a>
           </div>
         </div>
 
