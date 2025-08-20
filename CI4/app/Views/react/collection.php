@@ -15,9 +15,12 @@
     --color-black: #000000;
     --color-lighter-grey: #A9A9A9;
     --color-white: #FFFFFF;
-    --color-darker-amber: #CC9900; /* Derived from Amber for contrast */
-    --color-light-yellow: #FFFACD; /* Derived from Sunglow yellow for active background */
-    --color-lighter-blue: #6495ED; /* Used for the large number in timeline slides */
+    --color-darker-amber: #CC9900;
+    /* Derived from Amber for contrast */
+    --color-light-yellow: #FFFACD;
+    /* Derived from Sunglow yellow for active background */
+    --color-lighter-blue: #6495ED;
+    /* Used for the large number in timeline slides */
   }
 
   /* ========== General Design Enhancements ========== */
@@ -33,7 +36,8 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-sapphire-blue), var(--color-sapphire-blue), var(--color-sapphire-blue)); /* Sapphire blue */
+    background: linear-gradient(90deg, var(--color-sapphire-blue), var(--color-sapphire-blue), var(--color-sapphire-blue));
+    /* Sapphire blue */
     transform: scaleX(0);
     transform-origin: left;
     animation: brushStroke 1s ease-out forwards;
@@ -59,9 +63,12 @@
     top: -50%;
     left: -50%;
     background: radial-gradient(circle at center,
-        rgba(15, 82, 186, 0.8) 0%, /* Sapphire blue with opacity */
-        rgba(15, 82, 186, 0.6) 30%, /* Sapphire blue with opacity */
-        rgba(15, 82, 186, 0.4) 60%, /* Sapphire blue with opacity */
+        rgba(15, 82, 186, 0.8) 0%,
+        /* Sapphire blue with opacity */
+        rgba(15, 82, 186, 0.6) 30%,
+        /* Sapphire blue with opacity */
+        rgba(15, 82, 186, 0.4) 60%,
+        /* Sapphire blue with opacity */
         transparent 70%);
   }
 
@@ -97,7 +104,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(15, 82, 186, 0.1), rgba(15, 82, 186, 0.1)); /* Sapphire blue with opacity */
+    background: linear-gradient(45deg, rgba(15, 82, 186, 0.1), rgba(15, 82, 186, 0.1));
+    /* Sapphire blue with opacity */
     transform: translateY(100%);
     transition: transform 0.4s ease-in-out;
   }
@@ -174,7 +182,6 @@
   .creative-button:hover::before {
     transform: translate(-50%, -50%) scale(1);
   }
-
 </style>
 
 
@@ -200,29 +207,64 @@
     const [itemsDone, setItemsDone] = React.useState(false);
     const [familiesDone, setFamiliesDone] = React.useState(false);
     const [drivesDone, setDrivesDone] = React.useState(false);
+    const [impactInView, setImpactInView] = React.useState(false);
     
     const department = 'collectdkure';
-    const title = 'Collection & Distribution';
+    const title = 'Collect Distribution Kure';
+    const impactRef = React.useRef(null);
+    
+    
+    React.useEffect(() => {
+  const observer = new window.IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setImpactInView(true);
+      } else {
+        setImpactInView(false);
+        setCountItems(0);
+        setCountFamilies(0);
+        setCountDrives(0);
+        setItemsDone(false);
+        setFamiliesDone(false);
+        setDrivesDone(false);
+      }
+    },
+    { threshold: 0.3 }
+  );
+
+  if (impactRef.current) {
+    observer.observe(impactRef.current);
+  }
+
+  return () => {
+    if (impactRef.current) {
+      observer.unobserve(impactRef.current);
+    }
+  };
+}, []);
 
     React.useEffect(() => {
-      const animateCounter = (current, set, target, doneSetter) => {
-        const increment = Math.ceil(target / 100);
-        if (current < target) {
-          setTimeout(() => {
-            const next = current + increment;
-            if (next >= target) {
-              set(target);
-              doneSetter(true);
-            } else {
-              set(next);
-            }
-          }, 50);
+  if (!impactInView) return;
+
+  const animateCounter = (current, set, target, doneSetter) => {
+    const increment = Math.ceil(target / 60);
+    if (current < target) {
+      setTimeout(() => {
+        const next = current + increment;
+        if (next >= target) {
+          set(target);
+          doneSetter(true);
+        } else {
+          set(next);
         }
-      };
-      if (!itemsDone) animateCounter(countItems, setCountItems, 5000, setItemsDone);
-      if (!familiesDone) animateCounter(countFamilies, setCountFamilies, 1000, setFamiliesDone);
-      if (!drivesDone) animateCounter(countDrives, setCountDrives, 50, setDrivesDone);
-    }, [countItems, countFamilies, countDrives, itemsDone, familiesDone, drivesDone]);
+      }, 50);
+    }
+  };
+  if (!itemsDone) animateCounter(countItems, setCountItems, 5000, setItemsDone);
+  if (!familiesDone) animateCounter(countFamilies, setCountFamilies, 1000, setFamiliesDone);
+  if (!drivesDone) animateCounter(countDrives, setCountDrives, 50, setDrivesDone);
+}, [countItems, countFamilies, countDrives, itemsDone, familiesDone, drivesDone, impactInView]);
+
 
     const timelineData = [
       { title: "Places Touched", icon: "map-marker-alt", content: "12 areas in Doon: DIT, Malsi, Sahastradhara, ISBT, Ghantaghar, ONGC, etc." },
@@ -240,7 +282,7 @@
         <div className="wave-bg text-white py-24 px-4 mb-12 relative" style={{ backgroundColor: COLORS.sapphireBlue }}> {/* Sapphire blue background */}
           <div className="relative z-10 container mx-auto text-center"> {/* Added relative positioning and z-index */}
             <h1 className="text-5xl font-extrabold mb-6 text-white" style={{ textShadow: '0 0 6px rgba(0,0,0,0.6)', letterSpacing: '0.5px' }}>
-              Collection & Distribution
+              Collect Distribution Kure
             </h1>
             <p className="text-2xl mb-8 fade-in" style={{ animationDelay: '0.3s' }}>
               Bridging the Gap Between Need and Support
@@ -262,7 +304,7 @@
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 items-stretch">
-              <div className="bg-white p-4 rounded-xl shadow-md fade-in h-full flex flex-col justify-between" style={{ animationDelay: '0.6s' }}> {/* White background */}
+              <div className="bg-blue-50 py-16 p-4 rounded-xl shadow-md fade-in h-full flex flex-col justify-between" style={{ animationDelay: '0.6s' }}> {/* White background */}
                 <h2 className="text-3xl font-bold mb-1">What We Collect</h2>
                 <ul className="grid grid-cols-2 gap-4 text-gray-600 content-center mb-5" style={{ color: COLORS.lighterGrey }}> {/* Lighter grey text */}
                   {["Educational Materials","Clothing","School Supplies","Food Items","Toys","Books"].map(item => (
@@ -280,10 +322,10 @@
           </section>
 
           {/* Impact Counters */}
-          <section className="mb-16">
+          <section ref={impactRef}  className="mb-16">
             <h2 className="artistic-heading text-3xl font-bold text-gray-800 mb-8 text-center fade-in" style={{ color: COLORS.black }}>Our Impact</h2> {/* Black text */}
             <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="bg-white p-8 rounded-xl shadow-lg"> {/* White background */}
+              <div className="bg-blue-50 py-16 p-8 rounded-xl shadow-lg"> 
                 <div className="text-5xl font-bold mb-4 stat-number" style={{ color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
                   <span>{itemsDone ? '5000+' : countItems}</span>
                 </div>
@@ -291,7 +333,7 @@
                 <div className="mt-4"><i className="fas fa-box text-3xl" style={{ color: COLORS.sapphireBlue }}></i></div> {/* Sapphire blue icon */}
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg"> {/* White background */}
+              <div className="bg-blue-50 py-16 p-8 rounded-xl shadow-lg">
                 <div className="text-5xl font-bold mb-4 stat-number" style={{ color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
                   <span>{familiesDone ? '1000+' : countFamilies}</span>
                 </div>
@@ -299,7 +341,7 @@
                 <div className="mt-4"><i className="fas fa-users text-3xl" style={{ color: COLORS.sapphireBlue }}></i></div> {/* Sapphire blue icon */}
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg"> {/* White background */}
+              <div className="bg-blue-50 py-16 p-8 rounded-xl shadow-lg">
                 <div className="text-5xl font-bold mb-4 stat-number" style={{ color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
                   <span>{drivesDone ? '50+' : countDrives}</span>
                 </div>
@@ -374,6 +416,22 @@
             </div>
           </div>
         </section>
+        <section className="bg-blue-50 py-16 rounded-xl text-center mb-16">
+                    <h2 className="artistic-heading text-4xl font-bold text-gray-800 mb-6 fade-in">Join Our Creative Community</h2>
+                    <p className="text-xl text-gray-600 mb-8 fade-in" style={{animationDelay: '0.3s'}}>
+                        Whether you're an experienced artist or just beginning your creative journey, 
+                        our doors are open to all who wish to explore the world of arts and crafts.
+                    </p>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="creative-button text-white px-8 py-3 rounded-full font-semibold transition fade-in bg-[#0F52BA] hover:bg-blue-700"
+                      style={{ animationDelay: '0.6s' }}
+                      >
+                      Join Now
+                      </a>  
+                </section>
         </div>
       </div>
     );
