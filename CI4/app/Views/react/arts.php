@@ -5,21 +5,22 @@
 
 <style>
     .creativeimg img {
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
+        height: 500px;
+        width: min-content;
+        object-fit: contain;
         display: block;
+        margin: 0 auto;
     }
 
     @media (min-width: 768px) {
         .creativeimg img {
-            height: 300px;
+            height: 700px;
         }
     }
 
     @media (min-width: 992px) {
         .creativeimg img {
-            height: 400px;
+            height: 600px;
         }
     }
 
@@ -200,18 +201,23 @@
     }
 </style>
 
+<!--  spining bg to have images, and explore to have download portfolio pdf ka option. -->
+
+<!--  -->
+
 <script type="text/babel">
     const App = () => {
         const department = 'art-and-craft';
-        const title = 'Arts & Crafts';
+        const title = 'Art & Craft';
         
+        // add iages on click
         const artworks = [
-            { src: "/images/arts/our_products1.jpeg", title: "Traditional Art" },
-            { src: "/images/arts/our_products2.jpeg", title: "Modern Crafts" },
-            { src: "/images/arts/our_products4.jpeg", title: "Creative Expression" },
-            { src: "/images/arts/our_products3.jpeg", title: "Cultural Art" },
-            { src: "/images/arts/our_products6.jpeg", title: "Contemporary Design" },
-            { src: "/images/arts/our_products7.jpeg", title: "Innovative Crafts" }
+            { src: "/images/arts/our_products1.jpeg", title: "Canvas Painting" },
+            { src: "/images/arts/our_products2.jpeg", title: "Mandala Art" },
+            { src: "/images/arts/our_products4.jpeg", title: "Fridge Magnets" },
+            { src: "/images/arts/our_products3.jpeg", title: "Lippan Art" },
+            { src: "/images/arts/our_products6.jpeg", title: "Coasters" },
+            { src: "/images/arts/our_products7.jpeg", title: "Scented Candles" }
         ];
 
         const [count,setcount]=React.useState(0)
@@ -235,9 +241,9 @@
                 
                 <div className="paint-splash text-white py-24 px-4 mb-12 relative">
                     <div className="container mx-auto text-center">
-                        <h1 className="text-5xl font-bold mb-6 fade-in">Arts & Crafts</h1>
+                        <h1 className="text-5xl font-bold mb-6 fade-in">Art & Craft</h1>
                         <p className="text-2xl mb-8 fade-in" style={{animationDelay: '0.3s'}}>
-                            Unleashing Creativity, Inspiring Minds
+                            Crafted with Care, Powered by Hope!
                         </p>
                         <button className="creative-button bg-white text-amber-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in" style={{animationDelay: '0.6s'}}>
                             Explore Gallery
@@ -256,6 +262,7 @@
                             and self-expression through hands-on artistic activities. 
                             It focuses on engaging children in various art and craft-making sessions 
                             where they learn new skills while creating beautiful handmade products.
+                            state somewhere that these are made by volunteers and kids.
                             </p>
                             <div className="bg-amber-50 p-6 rounded-xl shadow-md fade-in" style={{animationDelay: '0.6s'}}>
                                 <h3 className="text-xl font-bold mb-4">Art Forms We Explore</h3>
@@ -299,7 +306,7 @@
                             <img 
                                 src="/images/arts/intro-section-illustration1.png" 
                                 alt="Creative Arts" 
-                                className=" rounded-xl shadow-xl floating"
+                                className="rounded-xl shadow-xl floating object-contain!"
                             />
                         </div>
                     </div>
@@ -332,28 +339,28 @@
                 <section className="bg-amber-50 rounded-xl p-12 mb-16 relative overflow-hidden">
                     <div className="pattern-bg absolute inset-0"></div>
                     <div className="relative z-10">
-                      <h2 className="artistic-heading text-4xl font-bold text-gray-800 mb-8 text-center fade-in">Our Programs</h2>
+                      <h2 className="artistic-heading text-4xl font-bold text-gray-800 mb-8 text-center fade-in">Join Our Creative Community</h2>
                       <div className="grid md:grid-cols-4 gap-8">
                         <div className="program-card bg-white p-8 rounded-xl shadow-lg text-center">
                           <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                             <i className="fas fa-paint-brush text-2xl text-amber-600" aria-label="Paint Brush Icon"></i>
                           </div>
-                          <h3 className="text-xl font-bold mb-4">Art Workshops</h3>
-                          <p className="text-gray-600">Regular workshops conducted by experienced artists</p>
+                          <h3 className="text-xl font-bold mb-4">Volunteer with us</h3>
+                          <p className="text-gray-600">add details</p>
                         </div>
                         <div className="program-card bg-white p-8 rounded-xl shadow-lg text-center">
                           <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                             <i className="fas fa-image text-2xl text-amber-600" aria-label="Image Icon"></i>
                           </div>
-                          <h3 className="text-xl font-bold mb-4">Exhibition Space</h3>
-                          <p className="text-gray-600">Platform to showcase artistic creations</p>
+                          <h3 className="text-xl font-bold mb-4">Donate material</h3>
+                          <p className="text-gray-600"></p>
                         </div>
                         <div className="program-card bg-white p-8 rounded-xl shadow-lg text-center">
                           <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                             <i className="fas fa-music text-2xl text-amber-600" aria-label="Music Icon"></i>
                           </div>
-                          <h3 className="text-xl font-bold mb-4">Cultural Events</h3>
-                          <p className="text-gray-600">Celebrating art through cultural programs</p>
+                          <h3 className="text-xl font-bold mb-4">School collaboration</h3>
+                          <p className="text-gray-600"></p>
                         </div>
                         <div className="program-card bg-white p-8 rounded-xl shadow-lg text-center">
                           <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -366,6 +373,7 @@
                       </div>
                     </div>
 </section>
+
 
                 <section className="text-center mb-16 max-w-4xl mx-auto">
                     <h2 className="artistic-heading text-4xl font-bold text-gray-800 mb-6 fade-in">Join Our Creative Community</h2>
