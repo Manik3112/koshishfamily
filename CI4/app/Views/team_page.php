@@ -10,7 +10,7 @@
       <div class="col-md"></div>
       <div class="col-md-5">
         <div class="card">
-          <img class="card-img-top" src="<?= base_url() ?>images/logo-crop.png" alt="Card image">
+          <img class="card-img-top" src="<?= base_url() ?>images/arts/logo_center.png" alt="Card image">
           <div class="card-body">
             <h4 class="card-title"><?= $name ?></h4>
             <p class="card-text">Designation: <?= $designation ?></p>
