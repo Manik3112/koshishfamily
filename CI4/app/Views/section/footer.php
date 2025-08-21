@@ -7,7 +7,7 @@
     <div class="container">
       <div class="row py-4 text-center text-white">
         <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
-          connect with us on social media
+          Connect with us on social media
         </div>
         <div class="col-lg-7 col-md-6">
           <a href="https://www.instagram.com/koshish_family" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -44,7 +44,7 @@
           <li><a href="#">Dehradun,India</a></li>
           <li><a href="mailto:koshishfamily@gmail.com">koshishfamily@gmail.com</a></li>
           <li><a href="mailto:koshishfamily.hr@gmail.com">Contact our HR team</a></li>
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHoWxLs1WtSZH3qXID_INUdRFuInQMJvKbqlkItqvXlH46_Q/viewform" target="_blank">Donate Here</a></li>
+          <li><a href="https://forms.gle/R5NvNZdiupQ7V6L18" target="_blank">Donate Here</a></li>
         </ul>
       </div>
     </div>
@@ -56,7 +56,7 @@
       <div class="row text-center text-white">
         <div class="col-12">
           <div class="footer-bottom__copyright">
-            &COPY; Copyright 2024 <a href="#">Koshish Family</a> | Created by Koshish Tech Titans</a><br><br>
+            &COPY; Copyright 2025 <a href="#">Koshish Family</a> | Created by Koshish Tech Titans</a><br><br>
           </div>
         </div>
       </div>
