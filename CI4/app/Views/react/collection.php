@@ -419,10 +419,10 @@
           </div>
         </section>
         <section className="bg-blue-50 py-16 rounded-xl text-center mb-16">
-                    <h2 className="artistic-heading text-4xl font-bold text-gray-800 mb-6 fade-in">Join Our Creative Community</h2>
+                    <h2 className="artistic-heading text-4xl font-bold text-gray-800 mb-6 fade-in">Join Our Community</h2>
                     <p className="text-xl text-gray-600 mb-8 fade-in" style={{animationDelay: '0.3s'}}>
                         Whether you're an experienced artist or just beginning your creative journey, 
-                        our doors are open to all who wish to explore the world of arts and crafts.
+                        our doors are open to all who wish to explore the world of Collect Distribution Kure.
                     </p>
                     <a
                       href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform"
