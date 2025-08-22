@@ -65,7 +65,7 @@ class TeamMember extends Model
         {"memberId": "M17DHADHA", "name": "Dharmvir Dharmacharya", "designation": "Member", "email": "", "photo": "", "bloodGroup": "0+ve", "joiningYear": 2017},
         {"memberId": "M23ABHRAI", "name": "Abhishek rai", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2023},
         {"memberId": "M21AARADH", "name": "Aaradhana", "designation": "Member", "email": "", "photo": "", "bloodGroup": "A+", "joiningYear": 2021},
-        {"memberId": "M23UROFAT", "name": "Urooj Fatima", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2023}
+        {"memberId": "M23UROFAT", "name": "Urooj Fatima", "designation": "Member", "email": "", "photo": "", "bloodGroup": "B+", "joiningYear": 2023},
         {"memberId": "M25SONJIN","name": "Sonika Jindal","designation": "Member","email": "aj7480039@gmail.com","photo": "","bloodGroup": "O+","joiningYear": 2025},
         {"memberId": "M25SUNBEH","name": "Sunsheel Behera","designation": "Member","email": "sunsheel0001@gmail.com","photo": "","bloodGroup": "O+","joiningYear": 2025},
         {"memberId": "M25SHASIN","name": "Shambhavi Sinha","designation": "Member","email": "shambhavisinha1306@gmail.com","photo": "","bloodGroup": "B+","joiningYear": 2025},
@@ -89,6 +89,12 @@ class TeamMember extends Model
             'designation'=>'DESIGNATION_NOT_FOUND',
             'bloodGroup'=>'BLOOD GROUP NOT FOUND',
         ];
+        
+        // Check if memberArray is null or not an array before foreach
+        if ($this->memberArray === null || !is_array($this->memberArray)) {
+            return $response;
+        }
+        
         foreach ($this->memberArray as $singleMember) {
             if($singleMember['memberId'] === $id) {
                 $response = $singleMember;
