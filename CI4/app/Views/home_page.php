@@ -1,3 +1,19 @@
+<?php include 'react/components/DepartmentHeader.php'; ?>
+
+<script type="text/babel">
+    // Create the main App component that includes the DepartmentHeader
+    App = function() {
+        return (
+            <DepartmentHeader 
+                department="home" 
+                title="Koshish Family" 
+                backLink="/" 
+            />
+        );
+    };
+</script>
+
+
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
                             START SECTION 2 - THE INTRO SECTION  
 /////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -15,16 +31,8 @@
         </h1>
         <p>Volunteer and make a difference in the life of people those who are in need</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform" target="_blank" style="text-decoration: none;">
-          <button type="button" class="rounded-pill btn-rounded">Join our Team
-            <span><i class="fas fa-arrow-right"></i></span>
-          </button>
+          <button type="button" class="rounded-pill btn-rounded bg-primary">Join our Team</button>
         </a>
-      </div>
-      <!-- START THE CONTENT FOR THE VIDEO -->
-      <div class="col-md-6 intros text-end">
-        <div class="video-box">
-          <img src="<?= base_url() ?>images/arts/logo.png" alt="video illutration" class="img-fluid">
-        </div>
       </div>
     </div>
   </div>
@@ -476,6 +484,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
