@@ -454,32 +454,10 @@
     <!-- START THE CTA CONTENT  -->
     <div class="row text-white">
       <div class="col-12 col-lg-6 gradient shadow p-3">
-        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=DIT%20University,%20Dehradun+(Koshish%20Family)&amp;output=embed"></iframe>
+        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.17911653095!2d78.0773653!3d30.402659600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d7006ff6fbc9%3A0x790977fcca1cf196!2sKoshish%20Aashiyana!5e0!3m2!1sen!2sin!4v1756048964754!5m2!1sen!2sin"></iframe>
       </div>
       <div class="col-12 col-lg-6 bg-white shadow p-3">
-        <div class="form w-100 pb-2">
-          <h4 class="display-3--title mb-5">Lets Connect!</h4>
-          <form action="#" class="row">
-            <div class="col-lg-6 col-md mb-3">
-              <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
-            </div>
-            <div class="col-lg-6 col-md mb-3">
-              <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
-            </div>
-            <div class="col-lg-12 mb-3">
-              <input type="email" placeholder="email address" id="inputEmail" class="shadow form-control form-control-lg">
-            </div>
-            <div class="col-lg-12 mb-3">
-              <textarea name="message" placeholder="message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
-            </div>
-            <div class="text-center d-grid mt-1">
-              <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">
-                submit
-                <i class="fas fa-paper-plane"></i>
-              </button>
-            </div>
-          </form>
-        </div>
+        
       </div>
     </div>
   </div>
