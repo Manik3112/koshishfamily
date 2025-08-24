@@ -381,8 +381,7 @@
           <section className="bg-green-300 opacity-0.3 shadow-lg rounded-2xl p-10 mb-16 space-y- shadow-lg text-center mx-auto">
                     <h2 className="artistic-heading text-4xl text-center font-bold text-gray-800 mb-6 fade-in underline underline-offset-8">Join Our Community</h2>
                     <p className="text-xl text-gray-600 mb-8 fade-in text-center" style={{animationDelay: '0.3s'}}>
-                        Whether you're an experienced artist or just beginning your creative journey, 
-                        our doors are open to all who wish to explore the world.
+                        Whether you are learning your first alphabet or advancing toward higher studies, Pathshala opens its doors to all who seek the light of education.
                     </p>
                     <a
                       href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform"
