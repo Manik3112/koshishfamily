@@ -99,8 +99,8 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
               <li><a class="dropdown-item" href="/pathshala">Pathshala</a></li>
-              <li><a class="dropdown-item" href="/collectdkure">Collection & Distribution</a></li>
-              <li><a class="dropdown-item" href="/art-and-craft">Art & Craft</a></li>
+              <li><a class="dropdown-item" href="/collectdkure">Collect Distribution Kure</a></li>
+              <li><a class="dropdown-item" href="/art-and-craft">Arts & Crafts</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#services">Kids</a></li>

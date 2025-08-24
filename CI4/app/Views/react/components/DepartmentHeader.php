@@ -142,8 +142,8 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
 
                         <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75`} href="/">Home</a></li>
                         <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 ${department === "pathshala" && "underline"}`} href="/pathshala">Pathshala</a></li>
-                        <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 ${department === "collectdkure" && "underline"}`} href="/collectdkure">Collection & Distribution</a></li>
-                        <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 ${department === "art-and-craft" && "underline"}`} href="/art-and-craft">Art & Craft</a></li>
+                        <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 ${department === "collectdkure" && "underline"}`} href="/collectdkure">Collect Distribution Kure</a></li>
+                        <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 ${department === "art-and-craft" && "underline"}`} href="/art-and-craft">Arts & Crafts</a></li>
                         <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75`} target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform?usp=send_form">Join Us</a></li>
                     </ul>
                 </div>

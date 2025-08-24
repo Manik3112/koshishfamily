@@ -33,8 +33,8 @@
         <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
         <ul class="list-inline campany-list">
           <li><a href="/pathshala">Pathshala</a></li>
-          <li><a href="/collectdkure">Collection & Distribution</a></li>
-          <li><a href="/art-and-craft">Art & Craft</a></li>
+          <li><a href="/collectdkure">Collect Distribution Kure</a></li>
+          <li><a href="/art-and-craft">Arts & Crafts</a></li>
         </ul>
       </div>
       <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">

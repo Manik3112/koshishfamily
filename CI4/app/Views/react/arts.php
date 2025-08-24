@@ -381,9 +381,15 @@
                         Whether you're an experienced artist or just beginning your creative journey, 
                         our doors are open to all who wish to explore the world of arts and crafts.
                     </p>
-                    <button className="creative-button bg-amber-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-700 transition fade-in" style={{animationDelay: '0.6s'}}>
-                        Join Now
-                    </button>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="creative-button text-white px-8 py-3 rounded-full font-semibold transition fade-in bg-[#0F52BA] hover:bg-blue-700"
+                      style={{ animationDelay: '0.6s' }}
+                      >
+                      Join Now
+                      </a>  
                 </section>
                 </div>
             </div>

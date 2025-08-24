@@ -3,133 +3,133 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
-    .carousel {
-        width: 100%;
-        text-align: center;
-        font-family: "Trebuchet MS", sans-serif;
-        display: block;
-        font-size: 6vmin;
-        position: relative;
-        height: 500px;
-        margin-bottom: 2rem;
+  .carousel {
+    width: 100%;
+    text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
+    display: block;
+    font-size: 6vmin;
+    position: relative;
+    height: 500px;
+    margin-bottom: 2rem;
+  }
+
+  .carousel .pages {
+    position: relative;
+    height: 100%;
+  }
+
+  .carousel .page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform: scale(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel {
+    min-height: 250px;
+  }
+
+  .carousel {
+    background-color: #f0f0f0;
+  }
+
+
+  .carousel .page div {
+    padding: 3em;
+  }
+
+  .carousel .page label {
+    cursor: pointer;
+    background: #d9ff4f;
+    padding: 1em 2em;
+    display: inline-block;
+    margin-top: 1em;
+  }
+
+  /* Show pages when corresponding input is checked */
+  #page1cb:checked~.pages #page1 {
+    transform: scale(1);
+  }
+
+  #page2cb:checked~.pages #page2 {
+    transform: scale(1);
+  }
+
+  #page3cb:checked~.pages #page3 {
+    transform: scale(1);
+  }
+
+  #page4cb:checked~.pages #page4 {
+    transform: scale(1);
+  }
+
+  #page5cb:checked~.pages #page5 {
+    transform: scale(1);
+  }
+
+  /* Other styles (already good) */
+  .program-card {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .program-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .stat-number {
+    animation: countUp 2s ease-out forwards;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+  }
+
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
 
-    .carousel .pages {
-        position: relative;
-        height: 100%;
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
     }
 
-    .carousel .page {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.5s;
-        transform: scale(0);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    to {
+      opacity: 1;
     }
+  }
 
-    .carousel {
-        min-height: 250px;
-    }
+  .hero-gradient {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  }
 
-    .carousel {
-        background-color: #f0f0f0;
-    }
+  .img-hover {
+    transition: transform 0.3s ease;
+  }
 
-
-    .carousel .page div {
-        padding: 3em;
-    }
-
-    .carousel .page label {
-        cursor: pointer;
-        background: #d9ff4f;
-        padding: 1em 2em;
-        display: inline-block;
-        margin-top: 1em;
-    }
-
-    /* Show pages when corresponding input is checked */
-    #page1cb:checked~.pages #page1 {
-        transform: scale(1);
-    }
-
-    #page2cb:checked~.pages #page2 {
-        transform: scale(1);
-    }
-
-    #page3cb:checked~.pages #page3 {
-        transform: scale(1);
-    }
-
-    #page4cb:checked~.pages #page4 {
-        transform: scale(1);
-    }
-
-    #page5cb:checked~.pages #page5 {
-        transform: scale(1);
-    }
-
-    /* Other styles (already good) */
-    .program-card {
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .program-card:hover {
-        transform: translateY(-10px);
-    }
-
-    .stat-number {
-        animation: countUp 2s ease-out forwards;
-    }
-
-    .fade-in {
-        opacity: 0;
-        animation: fadeIn 1s ease-in forwards;
-    }
-
-    @keyframes countUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    .hero-gradient {
-        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    }
-
-    .img-hover {
-        transition: transform 0.3s ease;
-    }
-
-    .img-hover:hover {
-        transform: scale(1.05);
-    }
+  .img-hover:hover {
+    transform: scale(1.05);
+  }
 </style>
 
 <script type="text/babel">
-    const { useState, useEffect } = React;
+  const { useState, useEffect } = React;
 
   const App = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -161,7 +161,7 @@
         <DepartmentHeader department={department} title={title} />
         
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-green-400 text-white py-20 px-4 mb-12">
+        <div className="bg-green-300 opacity-0.3 text-white py-20 px-4 mb-12">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6 fade-in">Pathshala Department</h1>
             <p className="text-2xl mb-8 fade-in" style={{ animationDelay: '0.3s' }}>
@@ -175,7 +175,7 @@
 
         {/* Carousel */}
         {/* Carousel */}
-        <div className="mx-4 md:mx-12 my-12 p-4 rounded-2xl shadow-lg bg-gradient-to-r from-blue-600/20 to-green-400/20 shadow-lg">
+        <div className="mx-4 md:mx-12 my-12 p-4 rounded-2xl shadow-lg bg-green-300 opacity-0.3 shadow-lg">
           <div className="relative w-full h-[500px] overflow-hidden rounded-2xl">
             {images.map((img, index) => (
               <div
@@ -220,7 +220,7 @@
         <div className="container mx-auto px-4">
 
           {/* Our Educational Approach */}
-          <section className="bg-gradient-to-r from-blue-600/20 to-green-400/20 shadow-lg rounded-2xl p-10 mb-16 space-y-12">
+          <section className="bg-green-300 opacity-0.3 shadow-lg rounded-2xl p-10 mb-16 space-y-12">
             <section className="grid md:grid-cols-2 gap-12 mb-16">
               <div className="space-y-6">
                 <h2 className="text-3xl font-bold text-gray-800 fade-in">Our Educational Approach</h2>
@@ -255,7 +255,7 @@
         </section>
         
          {/* Multiple Inspirational Quotes Section */}
-         <section className="bg-gradient-to-r from-blue-600/20 to-green-400/20 shadow-lg rounded-2xl p-10 mb-16 space-y-12 shadow-lg">
+         <section className="bg-green-300 opacity-0.3 shadow-lg rounded-2xl p-10 mb-16 space-y-12 shadow-lg">
 
 
             {/* 1st Block - Image Left */}
@@ -267,9 +267,9 @@
               />
               <div className="text-center md:text-left">
                 <p className="text-lg italic text-gray-700 mb-2">
-                  "The beautiful thing about learning is that nobody can take it away from you."
+                    Every child deserves a chance to shine, and every effort we make brings them closer to their dreams
                 </p>
-                <p className="text-indigo-600 font-semibold">— B.B. King</p>
+                <p className="text-indigo-600 font-semibold">— Anisha Bharti</p>
               </div>
             </div>
 
@@ -282,9 +282,9 @@
               />
               <div className="text-center md:text-left">
                 <p className="text-lg italic text-gray-700 mb-2">
-                  "Children must be taught how to think, not what to think."
+                  “Before we ask children what they want to become, we must first teach them how to dream.”
                 </p>
-                <p className="text-indigo-600 font-semibold">— Margaret Mead</p>
+                <p className="text-indigo-600 font-semibold">— Md Qasim </p>
               </div>
             </div>
 
@@ -297,9 +297,9 @@
               />
               <div className="text-center md:text-left">
                 <p className="text-lg italic text-gray-700 mb-2">
-                  "Education is not preparation for life; education is life itself."
+                  " We don't just teach...we listen, guide and grow togethe."
                 </p>
-                <p className="text-indigo-600 font-semibold">— John Dewey</p>
+                <p className="text-indigo-600 font-semibold">— Ainaskshi</p>
               </div>
             </div>
 
@@ -312,9 +312,10 @@
               />
               <div className="text-center md:text-left">
                 <p className="text-lg italic text-gray-700 mb-2">
-                  "Teaching kids to count is fine, but teaching them what counts is best."
+                  "Devil is the biggest teacher... It will come at your worst phase and will teach you the toughest lessons of life...
+                    Angles might come or not but Devil will."
                 </p>
-                <p className="text-indigo-600 font-semibold">— Bob Talbert</p>
+                <p className="text-indigo-600 font-semibold">— Amit Raj Singh</p>
               </div>
             </div>
 
@@ -322,7 +323,7 @@
 
 
           {/* Our Programs */}
-          <section className="bg-gradient-to-r from-blue-600/20 to-green-400/20 rounded-xl p-12 mb-16 shadow-lg">
+          <section className="bg-green-300 opacity-0.3 rounded-xl p-12 mb-16 shadow-lg">
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center fade-in">Our Programs</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="program-card bg-white p-8 rounded-xl shadow-lg text-center">
@@ -351,7 +352,7 @@
 
           {/* Our Impact */}
 
-          <section className="bg-gradient-to-r from-blue-600/20 to-green-400/20 shadow-lg rounded-2xl p-10 mb-16 space-y- shadow-lg">
+          <section className="bg-green-300 opacity-0.3 shadow-lg rounded-2xl p-10 mb-16 space-y- shadow-lg">
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center fade-in">Our Impact</h2>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div className="bg-white p-8 rounded-xl shadow-lg">
@@ -372,11 +373,26 @@
                 <div className="text-5xl font-bold text-indigo-600 mb-4 stat-number">90%</div>
                 <p className="text-xl text-gray-600">Success Rate</p>
                 <div className="mt-4">
-                  <i className="fas fa-chart-line text-3xl text-indigo-400"></i>
+                  <i className="fas fa-chart-line text-3xl text-indigo-300"></i>
                 </div>
               </div>
             </div>
           </section>
+          <section className="bg-green-300 opacity-0.3 shadow-lg rounded-2xl p-10 mb-16 space-y- shadow-lg text-center mx-auto">
+                    <h2 className="artistic-heading text-4xl text-center font-bold text-gray-800 mb-6 fade-in underline underline-offset-8">Join Our Community</h2>
+                    <p className="text-xl text-gray-600 mb-8 fade-in text-center" style={{animationDelay: '0.3s'}}>
+                        Whether you are learning your first alphabet or advancing toward higher studies, Pathshala opens its doors to all who seek the light of education.
+                    </p>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="creative-button text-white px-8 py-3 rounded-full font-semibold transition fade-in bg-[#0F52BA] hover:bg-blue-700"
+                      style={{ animationDelay: '0.6s' }}
+                      >
+                      Join Now
+                      </a>  
+                </section>
         </div>
       </div>
     );
