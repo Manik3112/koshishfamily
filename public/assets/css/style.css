@@ -7812,7 +7812,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-  background-color: #9926f0 !important;
+  background-color: var(--bs-primary) !important;
 }
 
 .bg-secondary {
@@ -11250,34 +11250,18 @@ fieldset:disabled .btn {
 }
 .btn-rounded {
   position: relative;
-  padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
+  padding: 0.8375rem;
   font-weight: 700;
   margin: 0;
   border: 0.1rem solid rgba(255, 255, 255, 0.6);
   background-color: #fff;
   display: block;
-}
-.btn-rounded span {
-  position: absolute;
-  background-color: var(--kf-accent-yellow);
-  width: 2.5rem;
-  height: 2.5rem;
-  top: 50%;
-  right: 5px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-}
-.btn-rounded span i {
-  color: var(--kf-text-white);
-  font-size: 1rem;
-  line-height: 2.5rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 .btn-rounded:hover {
   background: var(--kf-primary-gradient);
   color: var(--kf-text-white);
-}
-.btn-rounded:hover span {
-  background-color: var(--kf-overlay-black);
 }
 
 .display-2 {
@@ -11309,7 +11293,7 @@ fieldset:disabled .btn {
   height: 0.1rem;
   display: block;
   margin: 0 auto;
-  background-color:var(--bs-primary);
+  background-color: var(--bs-primary);
 }
 
 .heading-line::after {
@@ -11320,7 +11304,7 @@ fieldset:disabled .btn {
   display: block;
   margin: 0 auto;
   margin-bottom: 1rem;
-  background-color:var(--bs-primary);
+  background-color: var(--bs-primary);
 }
 
 .display-3 {
@@ -11379,6 +11363,23 @@ fieldset:disabled .btn {
   width: 100%;
   height: 100%;
 }
+/* .intro-section * {
+  color: var(--kf-text-black);
+}
+
+.intro-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../../images/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+} */
 
 .intros .video-box {
   position: relative;

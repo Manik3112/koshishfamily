@@ -15,9 +15,9 @@ class Home extends BaseController
     public function index(): string
     {
         $headerData = ['title' => 'Koshish Family', 'backLink' => '/' ];
-        return view('section/header', $headerData)
+        return view('components/header', $headerData)
             . view('home_page')
-            . view('section/footer');
+            . view('components/footer');
     }
 
     public function memberPage(): string

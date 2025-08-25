@@ -41,8 +41,8 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
             }
         };
         
-        // Default theme if department not found
-        if (!department || !themes[department]) {
+        // Default theme if department not found or for home page
+        if (!department || !themes[department] || department === 'home') {
             return {
                 bgColor: 'bg-primary',
                 textColor: 'text-white',
@@ -62,11 +62,11 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
     };
     
     return (
-        <nav className={`sticky z-[100000] flex flex-wrap items-center justify-between px-2 py-3 ${theme.bgColor} ${theme.textColor} shadow-lg fixed top-0 w-full`}>
-            <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <nav className={`sticky z-[100000] flex flex-wrap justify-between px-2 py-3 ${theme.bgColor} ${theme.textColor} shadow-lg fixed top-0 w-full`}>
+            <div className="container px-4 mx-auto flex flex-wrap items-end justify-between">
                 <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                    <a className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase tracking-wide" href={backLink}>
-                        <img src={`${baseUrl}images/arts/logo.png`} alt="logo image" className="mr-2 h-10 inline-block" />
+                    <a className="text-lg font-bold leading-relaxed inline-flex items-center mr-4 whitespace-nowrap uppercase tracking-wide" href={backLink}>
+                        <img src={`${baseUrl}images/arts/logo.png`} alt="logo image" className="mr-2 h-12 inline-block" />
                         <b>Koshish Family</b>
                     </a>
                     <button className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onClick={toggleMobileMenu}>
@@ -76,10 +76,10 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
                     </button>
                 </div>
                 <div className={`lg:flex lg:items-center lg:w-auto ${mobileMenuOpen ? 'block' : 'hidden'} w-full`}>
-                    <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+                    <ul className="flex flex-col items-end lg:flex-row list-none lg:ml-auto">
                         <li className="nav-item inline-flex">
                             <a href="https://www.instagram.com/koshish_family" target="_blank" aria-label="Instagram" className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style={{width:"24px", height:"24px", fill:"currentColor"}}>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style={{width:"22px", height:"22px", fill:"currentColor"}}>
                                     <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 
                                     114.9S339 319.5 339 255.9 287.7 141 224.1 
                                     141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 
@@ -123,7 +123,7 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
                             </a>
 
                             <a href="https://www.linkedin.com/company/koshishfamily/" target="_blank" aria-label="LinkedIn" className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style={{width:"24px", height:"24px", fill:"currentColor"}}>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style={{width:"22px", height:"22px", fill:"currentColor"}}>
                                     <path d="M416 32H31.9C14.3 32 0 46.5 0 
                                     64.3v383.4C0 465.5 14.3 480 
                                     31.9 480H416c17.6 0 32-14.5 
@@ -140,7 +140,7 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
                             </a>
                         </li>
 
-                        <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75`} href="/">Home</a></li>
+                        <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 ${department === "home" && "underline"}`} href="/">Home</a></li>
                         <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 ${department === "pathshala" && "underline"}`} href="/pathshala">Pathshala</a></li>
                         <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 ${department === "collectdkure" && "underline"}`} href="/collectdkure">Collect Distribution Kure</a></li>
                         <li><a className={`px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 ${department === "art-and-craft" && "underline"}`} href="/art-and-craft">Arts & Crafts</a></li>
