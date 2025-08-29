@@ -281,19 +281,53 @@
         <DepartmentHeader department={department} title={title} />
         
         {/* Hero */}
-        <div className="wave-bg text-white py-24 px-4 mb-12 relative" style={{ backgroundColor: COLORS.sapphireBlue }}> {/* Sapphire blue background */}
-          <div className="relative z-10 container mx-auto text-center"> {/* Added relative positioning and z-index */}
-            <h1 className="text-5xl font-extrabold mb-6 text-white" style={{ textShadow: '0 0 6px rgba(0,0,0,0.6)', letterSpacing: '0.5px' }}>
+        <div
+          className="text-white py-24 px-4 mb-12 relative"
+          style={{
+            backgroundImage: "url('images/event/event-4.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Overlay */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.7)", // dark overlay for readability
+              zIndex: 1,
+            }}
+          ></div>
+          
+          {/* Content */}
+          <div className="relative z-10 container mx-auto text-center">
+            <h1
+              className="text-5xl font-extrabold mb-6 text-white"
+              style={{
+                textShadow: "0 0 6px rgba(0,0,0,0.6)",
+                letterSpacing: "0.5px",
+              }}
+            >
               Collect Distribution Kure
             </h1>
-            <p className="text-2xl mb-8 fade-in" style={{ animationDelay: '0.3s' }}>
+            <p
+              className="text-2xl mb-8 fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
               Bridging the Gap Between Need and Support
             </p>
-            <a href={donation} target="_blank" rel="noopener noreferrer" className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in" style={{ animationDelay: '0.6s', opacity: 0, color: COLORS.sapphireBlue }}> {/* Sapphire blue text */}
+            <a
+              href={donation}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in"
+              style={{ animationDelay: "0.6s", opacity: 0 }}
+            >
               Get Involved
             </a>
           </div>
         </div>
+
 
         <div className="container mx-auto px-4">
           {/* Mission */}

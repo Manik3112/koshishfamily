@@ -238,18 +238,40 @@
         return (
             <div>
                 <DepartmentHeader department={department} title={title} />
-                
-                <div className="paint-splash text-white py-24 px-4 mb-12 relative">
-                    <div className="container mx-auto text-center">
-                        <h1 className="text-5xl font-bold mb-6 fade-in">Art & Craft</h1>
-                        <p className="text-2xl mb-8 fade-in" style={{animationDelay: '0.3s'}}>
-                            Crafted with Care, Powered by Hope!
+                  <div
+                      className="text-white py-24 px-4 mb-12 relative"
+                      style={{
+                        backgroundImage: "url('images/event/event-4.jpg')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                    >
+                      {/* Overlay */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          backgroundColor: "rgba(0,0,0,0.7)", 
+                          zIndex: 1,
+                        }}
+                      ></div>
+                    
+                      {/* Content */}
+                      <div className="container mx-auto text-center relative z-10">
+                        <h1 className="text-5xl font-bold mb-6">Art & Craft</h1>
+                        <p className="text-2xl mb-8" style={{ animationDelay: "0.3s" }}>
+                          Crafted with Care, Powered by Hope!
                         </p>
-                        <button className="creative-button bg-white text-amber-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in" style={{animationDelay: '0.6s'}}>
-                            Explore Gallery
+                        <button
+                          className="creative-button bg-white text-amber-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition"
+                          style={{ animationDelay: "0.6s" }}
+                        >
+                          Explore Gallery
                         </button>
+                      </div>
                     </div>
-                </div>
+
+
 
                 <div className="container mx-auto px-4">
 

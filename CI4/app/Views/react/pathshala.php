@@ -161,17 +161,44 @@
         <DepartmentHeader department={department} title={title} />
         
         {/* Hero Section */}
-        <div className="bg-green-300 opacity-0.3 text-white py-20 px-4 mb-12">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 fade-in">Pathshala Department</h1>
-            <p className="text-2xl mb-8 fade-in" style={{ animationDelay: '0.3s' }}>
+        <div
+          className="text-white py-20 px-4 mb-12 relative"
+          style={{
+            backgroundImage: "url('images/event/event-2.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Overlay */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.7)", // dark overlay for readability
+              zIndex: 1,
+            }}
+          ></div>
+          
+          {/* Content */}
+          <div className="container mx-auto text-center relative z-10">
+            <h1 className="text-5xl font-bold mb-6 fade-in">
+              Pathshala Department
+            </h1>
+            <p
+              className="text-2xl mb-8 fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
               Nurturing Young Minds, Building Better Futures
             </p>
-            <button className="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in" style={{ animationDelay: '0.6s' }}>
+            <button
+              className="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition fade-in"
+              style={{ animationDelay: "0.6s" }}
+            >
               Learn More
             </button>
           </div>
         </div>
+
 
         {/* Carousel */}
         {/* Carousel */}
