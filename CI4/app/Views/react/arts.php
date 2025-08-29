@@ -260,7 +260,7 @@
                       <div className="container mx-auto text-center relative z-10">
                         <h1 className="text-5xl font-bold mb-6">Art & Craft</h1>
                         <p className="text-2xl mb-8" style={{ animationDelay: "0.3s" }}>
-                          Crafted with Care, Powered by Hope!
+                          Crafted with Care, Powered by Hope! alsjkbcvibsvlasb
                         </p>
                         <button
                           className="creative-button bg-white text-amber-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition"
