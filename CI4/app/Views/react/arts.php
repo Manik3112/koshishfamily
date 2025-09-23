@@ -4,6 +4,46 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 <style>
+    /* Modal animations */
+    @keyframes modalFadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .modal-enter {
+        animation: modalFadeIn 0.3s ease-out;
+    }
+    
+    /* Modal scrollbar */
+    .modal-content {
+        scrollbar-width: thin;
+        scrollbar-color: #f59e0b transparent;
+    }
+    
+    .modal-content::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .modal-content::-webkit-scrollbar-thumb {
+        background-color: #f59e0b;
+        border-radius: 3px;
+    }
+    
+    .modal-content::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    /* Gallery item hover effect */
+    .gallery-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
     .creativeimg img {
         height: 500px;
         width: min-content;
@@ -210,15 +250,102 @@
         const department = 'art-and-craft';
         const title = 'Art & Craft';
         
-        // add iages on click
-        const artworks = [
-            { src: "/images/arts/our_products1.jpeg", title: "Canvas Painting" },
-            { src: "/images/arts/our_products2.jpeg", title: "Mandala Art" },
-            { src: "/images/arts/our_products4.jpeg", title: "Fridge Magnets" },
-            { src: "/images/arts/our_products3.jpeg", title: "Lippan Art" },
-            { src: "/images/arts/our_products6.jpeg", title: "Coasters" },
-            { src: "/images/arts/our_products7.jpeg", title: "Scented Candles" }
-        ];
+   // In your arts.php file, update the artworks array
+const artworks = [
+    { 
+        id: 'candle',
+        title: "Scented Candles", 
+        description: "Hand-poured scented candles in various fragrances.",
+        images: Array.from({length: 8}, (_, i) => `/images/anc/candle/${i+1}.jpeg`)
+    },
+    { 
+        id: 'canvas',
+        title: "Canvas Painting",
+        description: "Beautiful hand-painted canvas artworks created by our talented artists.",
+        images: Array.from({length: 9}, (_, i) => `/images/anc/canvas/${i+1}.jpeg`)
+    },
+    { 
+        id: 'bookmarks',
+        title: "Bookmarks", 
+        description: "Handmade coasters with unique designs.",
+        images: Array.from({length: 5}, (_, i) => `/images/anc/bookmarks/${i+1}.jpeg`)
+    },
+    { 
+        id: 'magnets',
+        title: "Fridge Magnets", 
+        description: "Handcrafted decorative magnets for your refrigerator.",
+        images: Array.from({length: 9}, (_, i) => `/images/anc/magnets/${i+1}.jpeg`)
+    },
+    { 
+        id: 'lippan',
+        title: "Lippan Art", 
+        description: "Traditional Indian mud and mirror work art pieces.",
+        images: Array.from({length: 5}, (_, i) => `/images/anc/lippan/${i+1}.jpeg`)
+    },
+    { 
+        id: 'mandala',
+        title: "Mandala Art", 
+        description: "Intricate mandala designs created with precision and care.",
+        images: Array.from({length: 4}, (_, i) => `/images/anc/mandala/${i+1}.jpeg`)
+    }
+];
+
+        
+        // State for modal
+        const [selectedArtwork, setSelectedArtwork] = React.useState(null);
+        const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+        
+        // Open modal with selected artwork
+        const openModal = (artwork) => {
+            try{
+                console.log("artwork.images.length",artwork.images.length)
+                if(artwork.images.length>0){
+                    setSelectedArtwork(artwork);
+                    setCurrentImageIndex(0);
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                }
+            }catch(e){
+                console.log(e);
+            }
+        };
+        
+        // Close modal
+        const closeModal = () => {
+            setSelectedArtwork(null);
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        };
+        
+        // Navigate between images
+        const nextImage = () => {
+            setCurrentImageIndex(prev => 
+                prev === selectedArtwork.images.length - 1 ? 0 : prev + 1
+            );
+        };
+        
+        const prevImage = () => {
+            setCurrentImageIndex(prev => 
+                prev === 0 ? selectedArtwork.images.length - 1 : prev - 1
+            );
+        };
+        
+        // Close modal when clicking outside content
+        const handleBackdropClick = (e) => {
+            if (e.target === e.currentTarget) {
+                closeModal();
+            }
+        };
+        
+        // Close modal on Escape key
+        React.useEffect(() => {
+            const handleEscape = (e) => {
+                if (e.key === 'Escape' && selectedArtwork) {
+                    closeModal();
+                }
+            };
+            
+            window.addEventListener('keydown', handleEscape);
+            return () => window.removeEventListener('keydown', handleEscape);
+        }, [selectedArtwork]);
 
         const [count,setcount]=React.useState(0)
 
@@ -241,7 +368,7 @@
                   <div
                       className="text-white py-24 px-4 mb-12 relative"
                       style={{
-                        backgroundImage: "url('images/event/event-4.jpg')",
+                        backgroundImage: "url('images/event/event-4.jpeg')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                       }}
@@ -340,22 +467,89 @@
                     {' '}<span style={{background: 'linear-gradient(90deg, #f59e0b, #d97706, #f59e0b)',WebkitBackgroundClip: 'text',color: 'transparent'}}>{count <= 1000 ? count : '1000+'}</span>{' '}
                      products since...</p>
                     <div className="grid md:grid-cols-3 gap-6">
-                        {artworks.map((image, index) => (
-                            <div key={index} className="gallery-item shadow-lg">
+                        {artworks.map((artwork, index) => (
+                            <div 
+                                key={artwork.id}
+                                className="gallery-item shadow-lg cursor-pointer"
+                                onClick={() => openModal(artwork)}
+                            >
                                 <img 
-                                    src={image.src} 
-                                    alt={image.title}
+                                    src={artwork.images[0]} 
+                                    alt={artwork.title}
                                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                                 <div className="gallery-overlay absolute inset-0 flex items-center justify-center p-6">
                                     <div className="text-center">
-                                        <h3 className="text-white text-2xl font-bold mb-2">{image.title}</h3>
+                                        <h3 className="text-white text-2xl font-bold mb-2">{artwork.title}</h3>
                                         <p className="text-white text-sm opacity-80">Click to view details</p>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
+                    
+                    {/* Modal */}
+                    {selectedArtwork && (
+                        <div 
+                            className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+                            onClick={handleBackdropClick}
+                        >
+                            <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] flex flex-col">
+                                {/* Header */}
+                                <div className="flex justify-between items-center p-4 border-b">
+                                    <h3 className="text-xl font-bold">{selectedArtwork.title}</h3>
+                                    <button 
+                                        onClick={closeModal}
+                                        className="text-gray-500 hover:text-gray-700"
+                                        aria-label="Close modal"
+                                    >
+                                        <i className="fas fa-times text-2xl"></i>
+                                    </button>
+                                </div>
+                                
+                                {/* Image */}
+                                <div className="relative flex-1 overflow-hidden">
+                                    <img 
+                                        src={selectedArtwork.images[currentImageIndex]} 
+                                        alt={selectedArtwork.title}
+                                        className="w-full h-full object-contain max-h-[60vh]"
+                                    />
+                                    
+                                    {/* Navigation arrows */}
+                                    {selectedArtwork.images.length > 1 && (
+                                        <>
+                                            <button 
+                                                onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                                                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition"
+                                                aria-label="Previous image"
+                                            >
+                                                <i className="fas fa-chevron-left"></i>
+                                            </button>
+                                            <button 
+                                                onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                                                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition"
+                                                aria-label="Next image"
+                                            >
+                                                <i className="fas fa-chevron-right"></i>
+                                            </button>
+                                        </>
+                                    )}
+                                    
+                                    {/* Image counter */}
+                                    {selectedArtwork.images.length > 1 && (
+                                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                                            {currentImageIndex + 1} / {selectedArtwork.images.length}
+                                        </div>
+                                    )}
+                                </div>
+                                
+                                {/* Description */}
+                                <div className="p-4 border-t">
+                                    <p className="text-gray-700">{selectedArtwork.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </section>
 
                 <section className="bg-amber-50 rounded-xl p-12 mb-16 relative overflow-hidden">
