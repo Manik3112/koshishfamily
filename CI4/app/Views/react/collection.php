@@ -1,4 +1,4 @@
-<!-- Include Header Component -->
+` <!-- Include Header Component -->
 <?php include(APPPATH . 'Views/react/components/DepartmentHeader.php'); ?>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -447,7 +447,7 @@
                       </div>
                     </div>
                   </div>
-                ))}
+                ))} 
               </div>
             </div>
           </div>
