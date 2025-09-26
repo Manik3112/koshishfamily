@@ -18,44 +18,38 @@
                             START SECTION 2 - THE INTRO SECTION  
 /////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-<section id="home" class="intro-section" style="padding:0; margin:0;">
+<section id="home" class="intro-section" 
+  style="position: relative; background: url('images/event/event-4.jpg') no-repeat center center/cover; color: white; padding: 100px 0;">
   
-  <!-- Background Image Block -->
-  <div style="position: relative; background: url('images/event/event-4.jpg') no-repeat center center/cover; padding: 100px 0 0 0 ;">
-    
+  <!-- Overlay -->
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+              background: rgba(0,0,0,0.); z-index: 1;"></div>
 
-    <!-- Content -->
-    <div class="container" style="position: relative; z-index: 2; padding: 100px 0;">
-      <div class="row align-items-center text-white">
-  <div class="col-md-6 intros text-start p-4" style="background: rgba(0,0,0,0.6); z-index: 1;border-radius: 10px;">
-          <h1 class="display-2">
-  <span class="display-2--intro">Hey! We're Koshish Family</span>
-  <span class="display-2--description lh-base" 
-        style="display:block; margin-top: 0.5rem; line-height:1.2;">
-    A Family for the Underprivileged. Dedicated towards helping children gain education and their overall skills 
-  </span>
-</h1>
-          <p>Volunteer and make a difference in the life of people those who are in need</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform" 
-             target="_blank" style="text-decoration: none;">
-            <button type="button" class="rounded-pill btn-rounded bg-primary">Join our Team</button>
-          </a>
-        </div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <div class="row align-items-center text-white">
+      <!-- START THE CONTENT FOR THE INTRO  -->
+      <div class="col-md-6 intros text-start">
+        <h1 class="display-2">
+          <span class="display-2--intro">Hey! We're Koshish Family</span>
+          <span class="display-2--description lh-base">
+            A Family for the Underprivileged. Dedicated towards helping children gain education and their overall skills 
+          </span>
+        </h1>
+        <p>Volunteer and make a difference in the life of people those who are in need</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd091F7yX0SJMDXT_eLybLfdX69u54_kKmCAwFaqCqXjuo-Dw/viewform" target="_blank" style="text-decoration: none;">
+          <button type="button" class="rounded-pill btn-rounded bg-primary">Join our Team</button>
+        </a>
       </div>
     </div>
-
-    <!-- ✅ Wave Shape at the END -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
-         style="display:block; position: relative; z-index: 2; margin-bottom:-1px;">
-      <path fill="#ffffff" fill-opacity="1" 
-            d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-
   </div>
+
+  <!-- Wave Shape -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="position: relative; z-index: 2;">
+    <path fill="#ffffff" fill-opacity="1" 
+          d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    </path>
+  </svg>
 </section>
-
-
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////
                              START SECTION 3 - THE CAMPANIES SECTION  
@@ -114,7 +108,7 @@
       <div class="heading-line mb-1"></div>
     </div>
   <!-- START THE DESCRIPTION CONTENT  -->
-    <div class="row pt-1 pb-2 mt-0 mb-2">
+    <div class="row pt-2 pb-2 mt-0 mb-3">
       <div class="col-md-6 border-right">
         <div class="bg-white p-3">
           <h2 class="fw-bold text-capitalize text-center">
@@ -229,14 +223,11 @@
             ["year" => 2021, "title" => "प्रयुक्तिः ( Event)", "details" => "Awareness Sessions, Summer Camps, Art n Craft Competitions, Yoga Sessions started on a regular basis."],
             ["year" => 2022, "title" => "पाठशाला ( Aashiyana)", "details" => "Koshish Family Completed 10 years. \"Aashiyana\" a place to study and grow with full amenities was created for Koshish Kids"],
             ["year" => 2023, "title" => "पञ्चिका ( Registered)", "details" => "Koshish Family is registered with high hopes of improving lives with the mission to get formal education for all underprivileged Koshish Kids"],
-            ["year" => 2024, "title" => "उन्नति (Unnati)", "details" => "First Kid graduated from Koshish Family after 12 years i.e.Bharti. She did her paid internship as a teacher in Scottish Academy Dehradun. We expanded to other areas of Doon."],
-            ["year" => 2025, "title" => "कौशल (Kaushala)", "details" => "Skill is the tool for success. Now, Koshish Kids are learning skills at the skill centre for better Job opportunities. Arjun, another graduate in the Koshish Family."],
           ];
 
           foreach ($timelineData as $index => $item): ?>
             <div class="timeline-item" onclick="openModal(<?= $index ?>)">
-              <div class="timeline-img"style="background-image: url('<?= base_url() ?>images/timeline/<?= file_exists(FCPATH.'images/timeline/'.$item['year'].'.jpg') ? $item['year'].'.jpg' : (file_exists(FCPATH.'images/timeline/'.$item['year'].'.png') ? $item['year'].'.png' : $item['year'].'.jpeg') ?>');"></div>
-
+              <div class="timeline-img" style="background-image: url('<?= base_url() ?>images/timeline/<?= $item['year'] ?>.jpg');"></div>
               <div class="timeline-content">
                 <h2 class="timeline-year"><?= $item['year'] ?></h2>
                 <h3 class="timeline-title"><?= $item['title'] ?></h3>
@@ -473,10 +464,11 @@
     </div>
 
     <!-- START THE CTA CONTENT  -->
-    <div class="row text-white place-content-center">
+    <div class="row text-white">
       <div class="col-12 col-lg-6 gradient shadow p-3">
-        <iframe width= "100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.17911653095!2d78.0773653!3d30.402659600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d7006ff6fbc9%3A0x790977fcca1cf196!2sKoshish%20Aashiyana!5e0!3m2!1sen!2sin!4v1756048964754!5m2!1sen!2sin"></iframe>
+        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.17911653095!2d78.0773653!3d30.402659600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d7006ff6fbc9%3A0x790977fcca1cf196!2sKoshish%20Aashiyana!5e0!3m2!1sen!2sin!4v1756048964754!5m2!1sen!2sin"></iframe>
       </div>
+      <div class="col-12 col-lg-6 bg-white shadow p-3">
         
       </div>
     </div>

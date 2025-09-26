@@ -66,7 +66,7 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
             <div className="container px-4 mx-auto flex flex-wrap items-end justify-between">
                 <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                     <a className="text-lg font-bold leading-relaxed inline-flex items-center mr-4 whitespace-nowrap uppercase tracking-wide" href={backLink}>
-                        <img src={`${baseUrl}images/arts/logo.png`} alt="logo image" className="mr-2 h-14 inline-block" />
+                        <img src={`${baseUrl}images/arts/logo.png`} alt="logo image" className="mr-2 h-12 inline-block" />
                         <b>Koshish Family</b>
                     </a>
                     <button className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onClick={toggleMobileMenu}>
