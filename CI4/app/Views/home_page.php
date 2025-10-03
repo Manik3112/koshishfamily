@@ -1,16 +1,20 @@
 <?php include 'react/components/DepartmentHeader.php'; ?>
 
+<!-- React Root Container -->
 <script type="text/babel">
     // Create the main App component that includes the DepartmentHeader
-    App = function() {
+    const App = function() {
         return (
+          <div id="react-header-root">
             <DepartmentHeader 
                 department="home" 
                 title="Koshish Family" 
                 backLink="/" 
             />
+          </div>
         );
     };
+    
 </script>
 
 
@@ -513,10 +517,20 @@ function openModal(index) {
   var timelineData = <?= json_encode($timelineData) ?>;
   var item = timelineData[index];
 
+  var source = item.year + '.jpg';
+
   document.getElementById("modalYear").textContent = item.year;
   document.getElementById("modalTitle").textContent = item.title;
   document.getElementById("modalDetails").textContent = item.details;
-  document.getElementById("modalImage").src = "<?= base_url() ?>images/timeline/" + item.year + ".jpg";
+  document.getElementById("modalImage").src = "<?= base_url() ?>images/timeline/" + source;
+  
+  document.getElementById("modalImage").onerror = function() {
+    if (this.src.endsWith('.jpg')) {
+      this.src = "<?= base_url() ?>images/timeline/" + item.year + '.png';
+    } else if (this.src.endsWith('.png')) {
+      this.src = "<?= base_url() ?>images/timeline/" + item.year + '.jpeg';
+    }
+  };
 
   modal.style.display = "block";
 
@@ -534,6 +548,7 @@ function openModal(index) {
 <style>
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
 
 .timeline {
   background-color: #f8f9fa;
