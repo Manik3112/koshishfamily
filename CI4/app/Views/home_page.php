@@ -357,12 +357,22 @@
         <button class="btn btn-outline-primary" type="button">All</button>
         <button class="btn btn-outline-primary" type="button">websites</button>
         <button class="btn btn-outline-primary" type="button">design</button>
-        <button class="btn btn-outline-primary" type="button">mockup</button>
       </div>
     </div> -->
 
     <!-- START THE PORTFOLIO ITEMS  -->
-    <div class="row">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="<?= base_url() ?>images/event/diwali-2025.jpg" alt="Diwali 2025" title="Diwali Celebration 2025" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Diwali Celebration</h4>
+              <p>October 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-lg-4 col-md-6">
         <div class="portfolio-box shadow">
           <img src="<?= base_url() ?>images/event/event-1.jpg" alt="Event 1 image" title="Event 1 picture" class="img-fluid">
