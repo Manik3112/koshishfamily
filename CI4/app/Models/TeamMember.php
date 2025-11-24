@@ -70,7 +70,10 @@ class TeamMember extends Model
         {"memberId": "M25SUNBEH","name": "Sunsheel Behera","designation": "Member","email": "sunsheel0001@gmail.com","photo": "","bloodGroup": "O+","joiningYear": 2025},
         {"memberId": "M25SHASIN","name": "Shambhavi Sinha","designation": "Member","email": "shambhavisinha1306@gmail.com","photo": "","bloodGroup": "B+","joiningYear": 2025},
         {"memberId": "M25ANIRAJ","name": "Animesh Raj","designation": "Member","email": "7animeshrajmsd7@gmail.com","photo": "","bloodGroup": "B+","joiningYear": 2025},
-        {"memberId": "M25RISBHA","name": "Rishabh Bhardwaj","designation": "Member","email": "rishabhvyas2980@gmail.com","photo": "","bloodGroup": "O+","joiningYear": 2025}
+        {"memberId": "M25RISBHA","name": "Rishabh Bhardwaj","designation": "Member","email": "rishabhvyas2980@gmail.com","photo": "","bloodGroup": "O+","joiningYear": 2025},
+        {"memberId": "M16QASSID","name": "Md Qasim Siddiqui","designation": "Member","email": "qsmmd123@gmail.com","photo": "","bloodGroup": "B+","joiningYear": 2016},
+        {"memberId": "M19ROHSIN","name": "Rohit Singh Rana","designation": "Member","email": "rohitrana1350@gmail.com","photo": "","bloodGroup": "O+","joiningYear": 2019},
+        {"memberId": "M24RITCHA","name": "Ritwik Chauhan","designation": "Member","email": "","photo": "","bloodGroup": "A+","joiningYear": 2024}
       ]
       ';
     private $memberArray;

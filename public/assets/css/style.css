@@ -11294,17 +11294,7 @@ fieldset:disabled .btn {
   display: block;
   margin: 0 auto;
   background-color: var(--bs-primary);
-}
-
-.heading-line::after {
-  content: "";
-  width: 2rem;
-  padding-top: 0.5rem;
-  height: 0.2rem;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  background-color: var(--bs-primary);
+  margin-bottom: 10px;
 }
 
 .display-3 {

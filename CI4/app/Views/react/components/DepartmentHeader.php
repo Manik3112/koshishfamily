@@ -62,11 +62,11 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
     };
     
     return (
-        <nav className={`sticky z-[100000] flex flex-wrap justify-between px-2 py-3 ${theme.bgColor} ${theme.textColor} shadow-lg fixed top-0 w-full`}>
-            <div className="container px-4 mx-auto flex flex-wrap items-end justify-between">
+        <nav className={`sticky z-[100000] flex flex-wrap justify-between px-2 py-1 ${theme.bgColor} ${theme.textColor} shadow-lg fixed top-0 w-full`}>
+            <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                 <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                     <a className="text-lg font-bold leading-relaxed inline-flex items-center mr-4 whitespace-nowrap uppercase tracking-wide" href={backLink}>
-                        <img src={`${baseUrl}images/arts/logo.png`} alt="logo image" className="mr-2 h-12 inline-block" />
+                        <img src={`${baseUrl}images/arts/logo.png`} alt="logo image" className="mr-2 h-20 inline-block" />
                         <b>Koshish Family</b>
                     </a>
                     <button className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onClick={toggleMobileMenu}>
@@ -76,7 +76,7 @@ function DepartmentHeader({ department, title, backLink = "/" }) {
                     </button>
                 </div>
                 <div className={`lg:flex lg:items-center lg:w-auto ${mobileMenuOpen ? 'block' : 'hidden'} w-full`}>
-                    <ul className="flex flex-col items-end lg:flex-row list-none lg:ml-auto">
+                    <ul className="flex flex-col items-end justify-center lg:flex-row list-none lg:ml-auto">
                         <li className="nav-item inline-flex">
                             <a href="https://www.instagram.com/koshish_family" target="_blank" aria-label="Instagram" className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style={{width:"22px", height:"22px", fill:"currentColor"}}>
